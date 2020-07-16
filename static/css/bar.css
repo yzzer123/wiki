@@ -1,6 +1,9 @@
-body{
+*{
     margin: 0;
     padding: 0;
+}
+body{
+
     font-family: sans-serif;
     /*background: black;*/
 }
@@ -13,9 +16,20 @@ nav{
     position: absolute;
     top: 0;
 }
+.nav-wrapper{
+
+     height: 80px;
+     width: 99%;
+     margin: 2px auto;
+     padding: 0;
+     border: solid 1px #00b894;
+     border-radius: 40px;
+ }
+
 #topbar{
     position: relative;
-    justify-content: center;
+    justify-content: space-around;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -29,8 +43,10 @@ nav{
 .main-menu-btn {
     position: relative;
     display: flex;
-    padding: 10px 50px;
-    margin: 20px 0;
+    padding: 10px 25px;
+    /*margin: 20px 0px;*/
+    margin-top: 20px;
+    margin-bottom: 17px;
     text-decoration: none;
     color: #00b894;
 
@@ -81,15 +97,7 @@ nav{
 
 }
 
-.nav-wrapper{
 
-    height: 80px;
-    width: 99%;
-    margin: 2px auto;
-    padding: 0;
-    border: solid 1px #00b894;
-    border-radius: 40px;
-}
 .submenu{
     z-index: 1;
     position: relative;
