@@ -10,7 +10,10 @@
     <script>
         document.onreadystatechange = function () {
             if(document.readyState == "complete"){
-                $("#loading-cover").slideUp();
+                 setTimeout(function () {
+                    $("#loading-cover").slideUp(700);
+
+                 },1700)
             }
         }
     </script>
