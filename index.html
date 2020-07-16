@@ -5,9 +5,25 @@
     <title>BUCT_IGEM</title>
     <link href="static/css/bar.css" type="text/css" rel="stylesheet" />
     <link href="static/font-awesome/css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="static/css/loading.css" type="text/css" rel="stylesheet" />
+    <script src="static/js/jquery.js"></script>
+    <script>
+        document.onreadystatechange = function () {
+            if(document.readyState == "complete"){
+                $("#loading-cover").fadeOut();
+            }
+        }
+    </script>
 </head>
 <body>
-<!--navigator-->
+<!-- loading begin-->
+<div id="loading-cover">
+    <div class="loading loading4">
+        <div class="item"></div>
+    </div>
+</div>
+<!-- loading end -->
+<!--navigator begin-->
 <nav>
     <div class="nav-wrapper">
     <ul id="topbar">
@@ -47,5 +63,6 @@
     </ul>
     </div>
 </nav>
+<!--navigator end -->
 </body>
 </html>
