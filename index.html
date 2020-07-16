@@ -8,12 +8,23 @@
     <link href="static/css/loading.css" type="text/css" rel="stylesheet" />
     <script src="static/js/jquery.js"></script>
     <script>
+
+        setInterval(function () {
+
+            if($("#logo-l-2").is(":hidden")){
+                $("#logo-l-2").show()
+                $("#logo-l-1").hide()
+            }else{
+                $("#logo-l-2").hide()
+                $("#logo-l-1").show()
+            }
+        },1600)
         document.onreadystatechange = function () {
             if(document.readyState == "complete"){
                  setTimeout(function () {
                     $("#loading-cover").slideUp(700);
 
-                 },1700)
+                 },3000)
             }
         }
     </script>
@@ -21,8 +32,33 @@
 <body>
 <!-- loading begin-->
 <div id="loading-cover">
-    <div class="loading loading4">
-        <div class="item"></div>
+    <img src="static/img/logo1.png" alt="logo1" class="logo-loading"  id="logo-l-1" />
+    <img src="static/img/logo2.png" alt="logo2" class="logo-loading" id="logo-l-2" />
+    <div class="loading-list">
+        <div class="loading loading2" id="left-loading">
+            <div class="wrapper">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+        <div class="loading loading4">
+            <div class="item">
+
+            </div>
+        </div>
+        <div class="loading loading2" id="right-loading">
+            <div class="wrapper">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+
     </div>
 </div>
 <!-- loading end -->
