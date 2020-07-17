@@ -6,6 +6,7 @@ body{
 
     font-family: sans-serif;
     /*background: black;*/
+    background: rgb(250, 255, 250);
 }
 html,body{
     height: 100%;

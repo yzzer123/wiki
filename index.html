@@ -6,25 +6,28 @@
     <link href="static/css/bar.css" type="text/css" rel="stylesheet" />
     <link href="static/font-awesome/css/font-awesome.css" type="text/css" rel="stylesheet">
     <link href="static/css/loading.css" type="text/css" rel="stylesheet" />
+    <link href="static/css/team_name.css" type="text/css" rel="stylesheet" />
+
     <script src="static/js/jquery.js"></script>
     <script>
 
-        setInterval(function () {
-
-            if($("#logo-l-2").is(":hidden")){
-                $("#logo-l-2").show()
-                $("#logo-l-1").hide()
-            }else{
-                $("#logo-l-2").hide()
-                $("#logo-l-1").show()
-            }
-        },1600)
+        // setInterval(function () {
+        //
+        //     if($("#logo-l-2").is(":hidden")){
+        //         $("#logo-l-1").hide()
+        //         $("#logo-l-2").show()
+        //     }else{
+        //         $("#logo-l-2").hide()
+        //         $("#logo-l-1").show()
+        //     }
+        // },1600)
         document.onreadystatechange = function () {
             if(document.readyState == "complete"){
                  setTimeout(function () {
+                     $(".team-container").hide();
                     $("#loading-cover").slideUp(700);
-
-                 },3000)
+                    $(".team-container").show()
+                 },7000)
             }
         }
     </script>
@@ -241,14 +244,37 @@
             top: 35%;
             transform: translate(-120px,0);
         }
+        /*#logo-l-2{*/
+        /*    -webkit-filter: grayscale(1) brightness(100);*/
+        /*}*/
+        @keyframes change-gray {
+            0%{
 
+                -webkit-filter: grayscale(1) brightness(100);
+            }
+
+            50%{
+                -webkit-filter: grayscale(1) brightness(100);
+            }
+            51%{
+                -webkit-filter: none;
+            }
+
+            100%{
+                -webkit-filter: none;
+            }
+
+        }
+        #logo-l-1{
+            animation: change-gray 3.2s  infinite  0s;
+        }
     </style>
 </head>
 <body>
 <!-- loading begin-->
 <div id="loading-cover">
-    <img src="static/img/logo1.png" alt="logo1" class="logo-loading"  style="" id="logo-l-1" />
-    <img src="static/img/logo2.png" alt="logo2" class="logo-loading" id="logo-l-2" />
+    <img src="static/img/logo1.png" alt="logo1" class="logo-loading" id="logo-l-1" />
+<!--    <img src="static/img/logo1.png" alt="logo2" class="logo-loading" id="logo-l-2" />-->
     <div class="loading-list">
 <!--        <div class="loading loading2" id="left-loading">-->
 <!--            <div class="wrapper">-->
@@ -318,5 +344,21 @@
     </div>
 </nav>
 <!--navigator end -->
+<!--team-name begin-->
+<div class="team-container">
+    <svg viewBox="0 0 1000 300">
+        <symbol id="line-text">
+            <text text-anchor="middle" x="50%" y="50%" dy=".4em">
+                BUCT
+            </text>
+        </symbol>
+
+        <use xlink:href="#line-text" class="text"></use>
+        <use xlink:href="#line-text" class="text"></use>
+        <use xlink:href="#line-text" class="text"></use>
+        <use xlink:href="#line-text" class="text"></use>
+    </svg>
+</div>
+<!--team-name end-->
 </body>
 </html>
