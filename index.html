@@ -7,7 +7,7 @@
     <link href="static/font-awesome/css/font-awesome.css" type="text/css" rel="stylesheet">
     <link href="static/css/loading.css" type="text/css" rel="stylesheet" />
     <link href="static/css/team_name.css" type="text/css" rel="stylesheet" />
-
+    <link href="static/css/cell.css" type="text/css" rel="stylesheet" />
     <script src="static/js/jquery.js"></script>
     <script>
 
@@ -21,13 +21,20 @@
         //         $("#logo-l-1").show()
         //     }
         // },1600)
+
         document.onreadystatechange = function () {
             if(document.readyState == "complete"){
                  setTimeout(function () {
-                     $(".team-container").hide();
+
+
+                    $(".team-container").hide();
                     $("#loading-cover").slideUp(700);
-                    $(".team-container").show()
-                 },7000)
+
+                     document.getElementById("body-content").style.visibility = "visible";
+                     $(".all-body").css({"overflow": "scroll"});
+                     $(".team-container").show();
+
+                 },2400)
             }
         }
     </script>
@@ -269,8 +276,9 @@
             animation: change-gray 3.2s  infinite  0.2s;
         }
     </style>
+    <script src="static/js/paper-full.min.js"></script>
 </head>
-<body>
+<body class="all-body" style="overflow: hidden">
 <!-- loading begin-->
 <div id="loading-cover">
     <img src="static/img/logo1.png" alt="logo1" class="logo-loading" id="logo-l-1" />
@@ -345,10 +353,27 @@
 </nav>
 <!--navigator end -->
 <!--team-name begin-->
+<!-- background-stars -->
+<script type="text/javascript" src="static/js/fly.js">
+
+</script>
+<style>
+    canvas{
+        position: relative;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: -999;
+    }
+</style>
+<canvas id="triangle-lost-in-space" resize="false"></canvas>
+<!-- background-stars end -->
+<div id="body-content" style="visibility: hidden" >
 <div class="team-container" >
-    <svg viewBox="0 0 1000 300" style="z-index: -100">
+
+
+    <svg viewBox="0 0 1000 300" style="z-index: -80">
         <symbol id="line-text">
-            <text text-anchor="middle" x="50%" y="50%" dy=".4em">
+            <text text-anchor="middle" x="50%" y="50%" dy=".4em" >
                 BUCT
             </text>
         </symbol>
@@ -358,7 +383,107 @@
         <use xlink:href="#line-text" class="text"></use>
         <use xlink:href="#line-text" class="text"></use>
     </svg>
+    <div class="cell-wrapper">
+    <div class="covid-wrapper" style="z-index: -100">
+        <div class="viruses">
+            <div class="virus"></div>
+            <div class="virus"></div>
+            <div class="virus"></div>
+            <div class="virus"></div>
+            <div class="virus"></div>
+            <div class="virus"></div>
+            <div class="virus"></div>
+            <div class="virus"></div>
+            <div class="virus"></div>
+            <div class="virus"></div>
+        </div>
+        <div class="covid-arms"></div>
+        <div class="covid-arms right"></div>
+        <div class="earth-wrapper">
+            <div class="earth-detail"></div>
+            <div class="earth">
+                <div class="covid-eyes earth-eyes"></div>
+                <div class="covid-eyes earth-eyes left"></div>
+                <div class= "earth-mouth"></div>
+
+
+            </div>
+        </div>
+        <div class="covid">
+            <div class="covid-spots">
+                <div class="covid-spot"></div>
+                <div class="covid-spot"></div>
+                <div class="covid-spot"></div>
+                <div class="covid-spot"></div>
+                <div class="covid-spot"></div>
+                <div class="covid-spot"></div>
+                <div class="covid-spot"></div>
+                <div class="covid-spot"></div>
+                <div class="covid-spot"></div>
+                <div class="covid-spot"></div>
+                <div class="covid-spot"></div>
+            </div>
+            <div class="covid-eyes"> </div>
+            <div class="covid-eyes left"></div>
+            <div class="covid-eyebrow"></div>
+            <div class="covid-eyebrow right"></div>
+            <div class="covid-mouth"></div>
+            <div class="covid-cheek"></div>
+            <div class="covid-cheek right"></div>
+        </div>
+    </div>
+    <div class="covid-pulse" style="z-index: -100">
+    </div>
+    </div>
+        <div class="g-cell-wrapper">
+    <div class="g-covid-wrapper" style="z-index: -100">
+        <div class="g-viruses">
+            <div class="g-virus"></div>
+            <div class="g-virus"></div>
+            <div class="g-virus"></div>
+            <div class="g-virus"></div>
+            <div class="g-virus"></div>
+            <div class="g-virus"></div>
+            <div class="g-virus"></div>
+            <div class="g-virus"></div>
+            <div class="g-virus"></div>
+            <div class="g-virus"></div>
+        </div>
+        <div class="g-covid-arms"></div>
+        <div class="g-covid-arms right"></div>
+
+        <div class="g-covid">
+            <div class="g-covid-spots">
+                <div class="g-covid-spot"></div>
+                <div class="g-covid-spot"></div>
+                <div class="g-covid-spot"></div>
+                <div class="g-covid-spot"></div>
+                <div class="g-covid-spot"></div>
+                <div class="g-covid-spot"></div>
+                <div class="g-covid-spot"></div>
+                <div class="g-covid-spot"></div>
+                <div class="g-covid-spot"></div>
+                <div class="g-covid-spot"></div>
+                <div class="g-covid-spot"></div>
+            </div>
+            <div class="g-covid-eyes"> </div>
+            <div class="g-covid-eyes left"></div>
+            <div class="g-covid-eyebrow"></div>
+            <div class="g-covid-eyebrow right"></div>
+            <div class="g-covid-mouth"></div>
+            <div class="g-covid-cheek"></div>
+            <div class="g-covid-cheek right"></div>
+        </div>
+    </div>
+    <div class="g-covid-pulse" style="z-index: -100">
+
+    </div>
+
+    </div>
+
 </div>
 <!--team-name end-->
+</div>
+
 </body>
 </html>
