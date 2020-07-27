@@ -124,16 +124,7 @@
   background-image: url("../images/dark-stripes.png"), -webkit-gradient(linear, right bottom, left top, from(#9d1231), color-stop(#ae1a38), color-stop(#be2240), color-stop(#d02a47), color-stop(#e1324f), color-stop(#ea4153), color-stop(#f34e58), color-stop(#fc5b5d), color-stop(#fd6e61), color-stop(#fe7f68), color-stop(#ff8f70), to(#ff9e7a));
   background-image: url("../images/dark-stripes.png"), linear-gradient(to left top, #9d1231, #ae1a38, #be2240, #d02a47, #e1324f, #ea4153, #f34e58, #fc5b5d, #fd6e61, #fe7f68, #ff8f70, #ff9e7a);
 }
-.g-covid-stick {
-  position: absolute;
-  overflow: visible;
-  display: block;
-  width: 6px;
-  z-index: -1;
-  height: 50px;
-  background-image: url("../images/dark-stripes.png"), -webkit-gradient(linear, right bottom, left top, from(#3c9d12), color-stop(#53ae1a), color-stop(#5ebe22), color-stop(#48d02a), color-stop(#e1324f), color-stop(#ea4153), color-stop(#f34e58), color-stop(#fc5b5d), color-stop(#fd6e61), color-stop(#fe7f68), color-stop(#ff8f70), to(#ff9e7a));
-  background-image: url("../images/dark-stripes.png"), linear-gradient(to left top, #3c9d12, #3aae1a, #44be22, #35d02a, #e1324f, #ea4153, #f34e58, #fc5b5d, #fd6e61, #fe7f68, #ff8f70, #ff9e7a);
-}
+
 .covid-stick:before {
   content: "";
   position: absolute;
@@ -145,17 +136,7 @@
   right: -5px;
   border-radius: 50%;
 }
-.g-covid-stick:before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-image: url("../images/dark-stripes.png"), -webkit-gradient(linear, right bottom, left top, from(#3c9d12), color-stop(#41ae1a), color-stop(#be2240), color-stop(#d02a47), color-stop(#e1324f), color-stop(#ea4153), color-stop(#f34e58), color-stop(#fc5b5d), color-stop(#fd6e61), color-stop(#fe7f68), color-stop(#ff8f70), to(#ff9e7a));
-  background-image: url("../images/dark-stripes.png"), linear-gradient(to left top, #9d1231, #ae1a38, #be2240, #d02a47, #e1324f, #ea4153, #f34e58, #fc5b5d, #fd6e61, #fe7f68, #ff8f70, #ff9e7a);
-  top: 36px;
-  right: -5px;
-  border-radius: 50%;
-}
+
 .covid-stick:nth-child(1) {
   bottom: 40px;
   left: 40px;
@@ -1050,7 +1031,7 @@
 
 .g-cell-wrapper{
   position: relative;
-  top: -940px;
+  top: -900px;
 }
 .g-covid-wrapper {
   position: absolute;
