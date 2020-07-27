@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-
+    overflow-x: hidden !important;
     font-family: sans-serif;
     /*background: black;*/
     background: rgb(250, 255, 250);
