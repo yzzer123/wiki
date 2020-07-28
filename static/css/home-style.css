@@ -58,8 +58,9 @@ footer{
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 400px;
-    margin: 30px auto;
+    height: 350px;
+    margin: 30px auto ;
+    margin-bottom: 0px;
     z-index: -1;
 }
 .logos{
@@ -70,7 +71,7 @@ footer{
 .f-logo{
     width: auto;
     height: 180px;
-    margin: 55px auto;
+    margin: 20px auto;
 }
 .buct-logo{
     height: 210px;
