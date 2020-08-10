@@ -128,5 +128,5 @@ const Bubble = canvEl => {
 
 document.addEventListener("DOMContentLoaded", () => {
   InitBubbles("#bubbles-canvas");
-  jellyFishSwim();
+
 });

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team</title>
+    <link href="static/css/bar.css" type="text/css" rel="stylesheet" />
+    <link href="static/font-awesome/css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="static/css/loading.css" type="text/css" rel="stylesheet" />
+    <link href="static/css/home-style.css" type="text/css" rel="stylesheet" />
+    <link href="static/css/members.css" type="text/css" rel="stylesheet">
+    <script src="static/js/jquery.js"></script>
+    <script src='static/js/gsap.min.js'></script>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-db44b196776521ea816683afab021f757616c80860d31da6232dedb8d7cc4862.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js'></script>
+    <script  src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js'></script>
+    <script type="text/javascript" src="static/js/lizi.js"></script>
+
+    <script>
+
+        // setInterval(function () {
+        //
+        //     if($("#logo-l-2").is(":hidden")){
+        //         $("#logo-l-1").hide()
+        //         $("#logo-l-2").show()
+        //     }else{
+        //         $("#logo-l-2").hide()
+        //         $("#logo-l-1").show()
+        //     }
+        // },1600)
+
+        document.onreadystatechange = function () {
+            if(document.readyState == "complete"){
+                setTimeout(function () {
+
+
+                    $(".team-container").hide();
+                    $("#loading-cover").slideUp(700);
+
+                    document.getElementById("body-content").style.visibility = "visible";
+                    $(".all-body").css({"overflow": "scroll"});
+                    $(".team-container").show();
+
+                },2400)
+            }
+        }
+    </script>
+    <style type="text/css">
+        #loading-cover{
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 999;
+        }
+        .loading-list{
+            position: relative;
+            top: 15%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        .loading {
+
+            width: 300px;
+            text-align: center;
+
+        }
+        .loading4 .item {
+            width: 250px;
+            height: 250px;
+            border: 10px solid #27c261;
+            margin: 0 auto;
+            margin-top: 90px;
+            animation: loading4-box 3.2s infinite 0s;
+        }
+
+        .loading4 .item::before {
+            content: '';
+            display: inline-block;
+            vertical-align: top;
+            width: 250px;
+            height: 0px;
+            background-color: #27c261;
+            animation: loading4 3.2s infinite 0s;
+        }
+
+        @keyframes loading4-box {
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            75% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loading4 {
+            0% {
+                height: 0px;
+            }
+            25% {
+                height: 250px;
+            }
+            50% {
+                height: 250px;
+            }
+            75% {
+                height: 0px;
+            }
+            100% {
+                height: 0px;
+            }
+        }
+
+
+        .loading2 .wrapper {
+            height: 100%;
+            margin: 0 auto;
+            font-size: 0;
+        }
+
+        .loading2 .wrapper .item {
+            background-color: crimson;
+            width: 15px;
+            height: 0px;
+            display: inline-block;
+            font-size: 0;
+            margin: 0 5px;
+            position: relative;
+            transform: translateY(145px);
+        }
+
+        .loading2 .wrapper .item::before {
+            content: '';
+            height: 50px;
+            width: 15px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            background-color: #27c261;;
+        }
+
+
+        .loading2 .wrapper .item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 50px;
+            width: 15px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            background-color: #27c261;
+        }
+
+        #left-loading .wrapper .item:nth-child(1)::before {
+            animation: loading2 2s infinite 0s;
+        }
+        #left-loading .wrapper .item:nth-child(2)::before {
+            animation: loading2 2s infinite .2s;
+        }
+        #left-loading .wrapper .item:nth-child(3)::before {
+            animation: loading2 2s infinite .4s;
+        }
+        #left-loading .wrapper .item:nth-child(4)::before {
+            animation: loading2 2s infinite .6s;
+        }
+        #left-loading .wrapper .item:nth-child(5)::before {
+            animation: loading2 2s infinite .8s;
+        }
+
+
+        #left-loading .wrapper .item:nth-child(1)::after {
+            animation: loading2 2s infinite 0s;
+        }
+        #left-loading .wrapper .item:nth-child(2)::after {
+            animation: loading2 2s infinite .2s;
+        }
+        #left-loading .wrapper .item:nth-child(3)::after {
+            animation: loading2 2s infinite .4s;
+        }
+        #left-loading .wrapper .item:nth-child(4)::after {
+            animation: loading2 2s infinite .6s;
+        }
+        #left-loading .wrapper .item:nth-child(5)::after {
+            animation: loading2 2s infinite .8s;
+        }
+
+
+        #right-loading .wrapper .item:nth-child(5)::before {
+            animation: loading2 2s infinite 0s;
+        }
+        #right-loading .wrapper .item:nth-child(4)::before {
+            animation: loading2 2s infinite .2s;
+        }
+        #right-loading .wrapper .item:nth-child(3)::before {
+            animation: loading2 2s infinite .4s;
+        }
+        #right-loading .wrapper .item:nth-child(2)::before {
+            animation: loading2 2s infinite .6s;
+        }
+        #right-loading .wrapper .item:nth-child(1)::before {
+            animation: loading2 2s infinite .8s;
+        }
+
+
+        #right-loading .wrapper .item:nth-child(5)::after {
+            animation: loading2 2s infinite 0s;
+        }
+        #right-loading .wrapper .item:nth-child(4)::after {
+            animation: loading2 2s infinite .2s;
+        }
+        #right-loading .wrapper .item:nth-child(3)::after {
+            animation: loading2 2s infinite .4s;
+        }
+        #right-loading .wrapper .item:nth-child(2)::after {
+            animation: loading2 2s infinite .6s;
+        }
+        #right-loading .wrapper .item:nth-child(1)::after {
+            animation: loading2 2s infinite .8s;
+        }
+
+        @keyframes loading2 {
+            0% {
+                height: 50px;
+            }
+            50% {
+                height: 5px;
+            }
+            100% {
+                height: 50px;
+            }
+        }
+        #loading-cover{
+            text-align: center;
+        }
+
+        #left-loading,#right-loading{
+            height: 225px;
+        }
+        .logo-loading{
+            position: absolute;
+            width: 240px;
+            z-index: 1000;
+            top: 35%;
+            transform: translate(-120px,0);
+        }
+        /*#logo-l-2{*/
+        /*    -webkit-filter: grayscale(1) brightness(100);*/
+        /*}*/
+        @keyframes change-gray {
+            0%{
+
+                -webkit-filter: grayscale(1) brightness(100);
+            }
+
+            50%{
+                -webkit-filter: grayscale(1) brightness(100);
+            }
+            51%{
+                -webkit-filter: none;
+            }
+
+            100%{
+                -webkit-filter: none;
+            }
+
+        }
+        #logo-l-1{
+            animation: change-gray 3.2s  infinite  0.2s;
+        }
+    </style>
+</head>
+
+<body class="all-body" style="overflow: hidden">
+<!-- loading begin-->
+<div id="loading-cover">
+    <img src="static/img/logo1.png" alt="logo1" class="logo-loading" id="logo-l-1" />
+    <!--    <img src="static/img/logo1.png" alt="logo2" class="logo-loading" id="logo-l-2" />-->
+    <div class="loading-list">
+
+        <div class="loading loading4">
+            <div class="item">
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!-- loading end -->
+<!--navigator begin-->
+<nav>
+    <div class="nav-wrapper">
+        <ul id="topbar">
+            <li class="main-menu"><a class="main-menu-btn" href="index.html">Home</a> </li>
+            <li class="main-menu">
+                <a class="main-menu-btn" href="#">Project <i class="fa fa-caret-down" style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Description</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Experiment</a></li>
+                    <li><a href="#">Notebook</a></li>
+                    <li><a href="#">Results</a></li>
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">Parts<i class="fa fa-caret-down" style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Contributions</a></li>
+
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">Human&nbsp;Practices</a> </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">Team<i class="fa fa-caret-down" style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="team_members.html">Member</a></li>
+                    <li><a href="#">Lab&School</a></li>
+                    <li><a href="#">Collabrations</a></li>
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">About<i class="fa fa-caret-down" style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Attributions</a></li>
+                    <li><a href="#">Demonstrate</a></li>
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">Judging&nbsp;Form</a> </li>
+
+        </ul>
+    </div>
+</nav>
+
+<div id="body-content" style="visibility: hidden" >
+    <div id="three-container" >
+    </div>
+    <div class="members-container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Yi Fu</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>
+                    Haina Lan</h2>
+                <p>
+                    I am Guangqi Shan. I am a sophomore in bioengineering.My hobby is to meet up with friends, watch movies and exercise.Participating in igem is about getting knowledge and a real lab experience, working with positive people. Enjoy the whole process and make my own contribution.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Guangqi Shan</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</div>
+<!--脚注-->
+<footer>
+    <div class="container">
+        <div class="box">
+            <a class="img" href="#">
+                <img src="static/img/igem2.png" alt="igem_logo" />
+
+            </a>
+            <p>IGEM</p>
+        </div>
+        <div class="box">
+            <a class="img" href="#">
+                <img src="static/img/logo1.png" alt="team_logo" />
+
+            </a>
+            <p>TEAM</p>
+        </div><div class="box">
+        <a class="img" href="#">
+            <img src="static/img/buct-logo2.png" alt="buct_logo" />
+
+        </a>
+        <p>BUCT</p>
+    </div><div class="box" style="margin-left: -30px">
+        <a class="img" href="#">
+            <img src="static/img/zhihu.png" alt="zhihu_logo" />
+
+        </a>
+        <p>ZhiHu</p>
+    </div>
+    </div>
+    <p class="copyright">Copyright ©  2020  BUCT  All rights reserved.</p>
+</footer>
+<!--脚注结束-->
+</body>
+</html>
