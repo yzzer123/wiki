@@ -18,7 +18,7 @@ function init() {
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
 	l1.setCrossOrigin('Anonymous');
-	l1.load('static/img/BUCT.png', function(img) {
+	l1.load('static/img/BUCT.jpg', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);

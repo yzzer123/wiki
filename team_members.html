@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Team</title>
     <link href="static/css/bar.css" type="text/css" rel="stylesheet" />
-    <link href="static/font-awesome/css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="static/font-awesome/css/font-awesome.css" type="text/css" rel="stylesheet" />
     <link href="static/css/loading.css" type="text/css" rel="stylesheet" />
     <link href="static/css/home-style.css" type="text/css" rel="stylesheet" />
-    <link href="static/css/members.css" type="text/css" rel="stylesheet">
+    <link href="static/css/members.css" type="text/css" rel="stylesheet" />
+    <link href="static/css/card_component.css" type="text/css" rel="stylesheet" />
     <script src="static/js/jquery.js"></script>
     <script src='static/js/gsap.min.js'></script>
     <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-db44b196776521ea816683afab021f757616c80860d31da6232dedb8d7cc4862.js"></script>
@@ -16,20 +17,11 @@
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js'></script>
     <script  src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js'></script>
     <script type="text/javascript" src="static/js/lizi.js"></script>
-
+    <script type="text/javascript" src="static/js/teacher_card.js"></script>
     <script>
 
-        // setInterval(function () {
-        //
-        //     if($("#logo-l-2").is(":hidden")){
-        //         $("#logo-l-1").hide()
-        //         $("#logo-l-2").show()
-        //     }else{
-        //         $("#logo-l-2").hide()
-        //         $("#logo-l-1").show()
-        //     }
-        // },1600)
 
+        // loader
         document.onreadystatechange = function () {
             if(document.readyState == "complete"){
                 setTimeout(function () {
@@ -45,6 +37,15 @@
                 },2400)
             }
         }
+        // teacher card initialization
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-7243260-2']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
     </script>
     <style type="text/css">
         #loading-cover{
@@ -347,7 +348,64 @@
 <div id="body-content" style="visibility: hidden" >
     <div id="three-container" >
     </div>
-    <div class="members-container">
+    <div class="members-container"
+">
+        <h1 class="member-title">members</h1>
+        <div class="card" style="background: #7F7FD5;  /* fallback for old browsers */
+                                    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+                                    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                                    " >
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Yi Fu</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
+        <div class="card" style="background: #8360c3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>
+                    Haina Lan</h2>
+                <p>
+                    I am Guangqi Shan. I am a sophomore in bioengineering.My hobby is to meet up with friends, watch movies and exercise.Participating in igem is about getting knowledge and a real lab experience, working with positive people. Enjoy the whole process and make my own contribution.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Guangqi Shan</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Guangqi Shan</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
         <div class="card">
             <div class="imgBx">
                 <img src="static/img/members/2.jpg" />
@@ -385,6 +443,169 @@
             </div>
 
         </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Guangqi Shan</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Yi Fu</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>
+                    Haina Lan</h2>
+                <p>
+                    I am Guangqi Shan. I am a sophomore in bioengineering.My hobby is to meet up with friends, watch movies and exercise.Participating in igem is about getting knowledge and a real lab experience, working with positive people. Enjoy the whole process and make my own contribution.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Guangqi Shan</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Guangqi Shan</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Yi Fu</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>
+                    Haina Lan</h2>
+                <p>
+                    I am Guangqi Shan. I am a sophomore in bioengineering.My hobby is to meet up with friends, watch movies and exercise.Participating in igem is about getting knowledge and a real lab experience, working with positive people. Enjoy the whole process and make my own contribution.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Guangqi Shan</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/img/members/2.jpg" />
+            </div>
+            <div class="content">
+                <h2>Guangqi Shan</h2>
+                <p>
+                    She is an active ,imaginative, and creative girl, she likes travelling around and make friends with guys who have interesting soul. She enjoys both solitary and jollification, which indicates that she is slightly mad ,maybe.(She is fond of biology，and she wanna find a lifelong project to fight with.
+                </p>
+            </div>
+
+        </div>
+        <h1 class="member-title instructors" >INSTRUCTORS</h1>
+    <div class="t-card-wrapper">
+        <ul class="stage clearfix">
+
+            <li class="scene">
+                <div class="movie" onclick="return true">
+                    <div class="poster"></div>
+                    <div class="info">
+                        <header>
+                            <h1>KAILI  NIE</h1>
+                            <span class="year">Associate Professor of the College of LifeSciences and Technology, BUCT.</span>
+
+                        </header>
+                        <p>
+                            He got his PhD at Beijing University of Chemical Technology in 2009, supervised by Prof. Tianwei Tan. After that, he started his postdoctoral fellow with Professor Shijie Liu at SUNY-ESF, and investigated on the cellulase utilization. Now, He is focusing on enzymatic modification, synthetic biology, bio-energy, and bio-refinery for high value-added chemicals.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="scene">
+                <div class="movie" onclick="return true">
+                    <div class="poster"></div>
+                    <div class="info">
+                        <header>
+                            <h1>LUO  LIU</h1>
+                            <span class="year">Associate Professor of the College of Life Sciences and Technology, BUCT.</span>
+
+                        </header>
+                        <p>
+                            He studied technical biology at Institute for Technical Biochemistry, University of Stuttgart, supervised by Prof. Rolf Schmid, and received PhD in 2007. After that, he completed a drug biosynthesis project for PharmaZell GmbH in Germany, from “proof of concept” to pilot plant. He is focusing on synthetic biology, multi enzyme cascade reaction, and biorefinery for producing bio-based chemicals including bioenergy.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="scene">
+                <div class="movie" onclick="return true">
+                    <div class="poster"></div>
+                    <div class="info">
+                        <header>
+                            <h1>The Gold Rush</h1>
+                            <span class="year">1925</span>
+                            <span class="rating">NR</span>
+                            <span class="duration">95 minutes</span>
+                        </header>
+                        <p>
+                            The Tramp travels to the Yukon to take part in the Klondike Gold Rush. He gets mixed up with some burly characters and falls in love with the beautiful Georgia. He tries to win her heart with his singular charm.
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div><!-- /wrapper -->
     </div>
 
 
