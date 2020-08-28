@@ -1,0 +1,96 @@
+
+
+body {
+
+    --col-deepblue:rgb(204, 246, 204);
+}
+
+.wave-box{
+    transform: translateY(-100px);
+}
+
+.wave-box svg {
+    width:100%;
+    overflow:visible;
+}
+
+.wave {
+    animation: wave 3s linear;
+    animation-iteration-count:infinite;
+    fill: rgb(204, 246, 204);
+}
+
+.drop {
+    fill: var(--col-deepblue);
+    xfill: #99000055;
+    animation: drop 3.2s linear infinite normal;
+    stroke: var(--col-deepblue);
+    stroke-width:0.5;
+    transform: translateY(23px) ;
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+}
+.drop1 {
+
+}
+.drop2 {
+    animation-delay: 3s;
+    animation-duration:5s;
+}
+.drop3 {
+    animation-delay: -2s;
+    animation-duration:5.4s;
+}
+.drop4 {
+    animation-delay: 2.6s;
+}
+.drop5 {
+    animation-delay: 2.7s;
+    animation-duration:5.1s;
+}
+.drop6 {
+    animation-delay: -2.1s;
+    animation-duration:5.2s;
+}
+.gooeff {
+    filter: url(#goo);
+}
+#wave2 {
+    animation-duration:7s;
+    animation-direction: reverse;
+    opacity: .6
+}
+#wave3 {
+    animation-duration: 9s;
+    opacity:.3;
+}
+@keyframes drop {
+    0% {
+        transform: translateY(25px);
+    }
+    30% {
+        transform: translateY(-10px) scale(.1);
+    }
+    30.001% {
+        transform: translateY(25px) scale(1);
+    }
+    70% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(-10px) scale(.1);
+    }
+}
+@keyframes wave {
+    to {transform: translateX(-100%);}
+}
+@keyframes ball {
+    to {transform: translateY(20%);}
+}
+
+.wave-bottom{
+    margin-top: -10px;
+    width: 110%;
+    height: 60px;
+    background-color: var(--col-deepblue);
+}

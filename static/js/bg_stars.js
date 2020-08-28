@@ -71,10 +71,10 @@ const Bubble = canvEl => {
   var alpha = random(0, 1);
 
   let fillArray = [
-  "rgba(138, 204, 197, ",
-  "rgba(62, 173, 178, ",
-  "rgba(0, 79, 88, ",
-  "rgba(0, 107, 118, "];
+  "rgba(204, 246, 204,",
+  "rgba(147, 224, 147, ",
+  "rgba(101, 203, 101, ",
+  "rgba(199, 238, 190, "];
 
   let fill = fillArray[Math.floor(Math.random() * fillArray.length)];
   const radius = random(0.3, 7.0);
