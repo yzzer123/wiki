@@ -6,7 +6,7 @@ body {
 }
 
 .wave-box{
-    transform: translateY(-100px);
+    transform: translateY(-180px);
 }
 
 .wave-box svg {
@@ -89,8 +89,8 @@ body {
 }
 
 .wave-bottom{
-    margin-top: -10px;
+    margin-top: -80px;
     width: 110%;
-    height: 60px;
+    height: 40px;
     background-color: var(--col-deepblue);
 }
