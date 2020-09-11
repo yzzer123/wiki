@@ -14,18 +14,21 @@ html,body{
 }
 nav{
     z-index: 99;
-    width: 100%;
-    position: relative;
+    height: 86px;
+    width: 99%;
+    position: fixed;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 43px;
+    margin: 4px 0 0 10px;
     top: 0;
 }
 .nav-wrapper{
-
-     height: 80px;
-     width: 99%;
-     margin: 2px auto;
+     height: 86px;
+     width: 100%;
      padding: 0;
      border: solid 1px #00b894;
-     border-radius: 40px;
+     border-radius: 43px;
  }
 
 #topbar{
@@ -188,4 +191,15 @@ nav{
     right: 1.5%;
 
 
+}
+.main-menu a img{
+    width: 150px;
+    margin: 2px 0 0 10px;
+    border-radius: 40px;
+    transition: box-shadow 0.4s ease-in-out;
+}
+.main-menu a img:hover{
+    box-shadow:  8px 8px 16px #cccccc,
+    -8px -8px 16px #ffffff;
+    transition: box-shadow 0.4s ease-in-out;
 }

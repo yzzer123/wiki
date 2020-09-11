@@ -20,17 +20,6 @@
 <!--    <script src="static/js/bg_stars.js"></script>-->
     <script>
 
-        // setInterval(function () {
-        //
-        //     if($("#logo-l-2").is(":hidden")){
-        //         $("#logo-l-1").hide()
-        //         $("#logo-l-2").show()
-        //     }else{
-        //         $("#logo-l-2").hide()
-        //         $("#logo-l-1").show()
-        //     }
-        // },1600)
-
         document.onreadystatechange = function () {
             if(document.readyState == "complete"){
                 setTimeout(function () {
@@ -47,245 +36,7 @@
             }
         }
     </script>
-    <!-- 预加载CSS代码-->
-    <style type="text/css">
-        #loading-cover{
-            position: absolute;
-            top: 0px;
-            width: 100%;
-            height: 100%;
-            background: white;
-            z-index: 999;
-        }
-        .loading-list{
-            position: relative;
-            top: 15%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
 
-        }
-        .loading {
-
-            width: 300px;
-            text-align: center;
-
-        }
-        .loading4 .item {
-            width: 250px;
-            height: 250px;
-            border: 10px solid #27c261;
-            margin: 0 auto;
-            margin-top: 90px;
-            animation: loading4-box 3.2s infinite 0s;
-        }
-
-        .loading4 .item::before {
-            content: '';
-            display: inline-block;
-            vertical-align: top;
-            width: 250px;
-            height: 0px;
-            background-color: #27c261;
-            animation: loading4 3.2s infinite 0s;
-        }
-
-        @keyframes loading4-box {
-            0% {
-                transform: rotate(0deg);
-            }
-            25% {
-                transform: rotate(0deg);
-            }
-            50% {
-                transform: rotate(180deg);
-            }
-            75% {
-                transform: rotate(180deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes loading4 {
-            0% {
-                height: 0px;
-            }
-            25% {
-                height: 250px;
-            }
-            50% {
-                height: 250px;
-            }
-            75% {
-                height: 0px;
-            }
-            100% {
-                height: 0px;
-            }
-        }
-
-
-        .loading2 .wrapper {
-            height: 100%;
-            margin: 0 auto;
-            font-size: 0;
-        }
-
-        .loading2 .wrapper .item {
-            background-color: crimson;
-            width: 15px;
-            height: 0px;
-            display: inline-block;
-            font-size: 0;
-            margin: 0 5px;
-            position: relative;
-            transform: translateY(145px);
-        }
-
-        .loading2 .wrapper .item::before {
-            content: '';
-            height: 50px;
-            width: 15px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            background-color: #27c261;;
-        }
-
-
-        .loading2 .wrapper .item::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 50px;
-            width: 15px;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-            background-color: #27c261;
-        }
-
-        #left-loading .wrapper .item:nth-child(1)::before {
-            animation: loading2 2s infinite 0s;
-        }
-        #left-loading .wrapper .item:nth-child(2)::before {
-            animation: loading2 2s infinite .2s;
-        }
-        #left-loading .wrapper .item:nth-child(3)::before {
-            animation: loading2 2s infinite .4s;
-        }
-        #left-loading .wrapper .item:nth-child(4)::before {
-            animation: loading2 2s infinite .6s;
-        }
-        #left-loading .wrapper .item:nth-child(5)::before {
-            animation: loading2 2s infinite .8s;
-        }
-
-
-        #left-loading .wrapper .item:nth-child(1)::after {
-            animation: loading2 2s infinite 0s;
-        }
-        #left-loading .wrapper .item:nth-child(2)::after {
-            animation: loading2 2s infinite .2s;
-        }
-        #left-loading .wrapper .item:nth-child(3)::after {
-            animation: loading2 2s infinite .4s;
-        }
-        #left-loading .wrapper .item:nth-child(4)::after {
-            animation: loading2 2s infinite .6s;
-        }
-        #left-loading .wrapper .item:nth-child(5)::after {
-            animation: loading2 2s infinite .8s;
-        }
-
-
-        #right-loading .wrapper .item:nth-child(5)::before {
-            animation: loading2 2s infinite 0s;
-        }
-        #right-loading .wrapper .item:nth-child(4)::before {
-            animation: loading2 2s infinite .2s;
-        }
-        #right-loading .wrapper .item:nth-child(3)::before {
-            animation: loading2 2s infinite .4s;
-        }
-        #right-loading .wrapper .item:nth-child(2)::before {
-            animation: loading2 2s infinite .6s;
-        }
-        #right-loading .wrapper .item:nth-child(1)::before {
-            animation: loading2 2s infinite .8s;
-        }
-
-
-        #right-loading .wrapper .item:nth-child(5)::after {
-            animation: loading2 2s infinite 0s;
-        }
-        #right-loading .wrapper .item:nth-child(4)::after {
-            animation: loading2 2s infinite .2s;
-        }
-        #right-loading .wrapper .item:nth-child(3)::after {
-            animation: loading2 2s infinite .4s;
-        }
-        #right-loading .wrapper .item:nth-child(2)::after {
-            animation: loading2 2s infinite .6s;
-        }
-        #right-loading .wrapper .item:nth-child(1)::after {
-            animation: loading2 2s infinite .8s;
-        }
-
-        @keyframes loading2 {
-            0% {
-                height: 50px;
-            }
-            50% {
-                height: 5px;
-            }
-            100% {
-                height: 50px;
-            }
-        }
-        #loading-cover{
-            text-align: center;
-        }
-
-        #left-loading,#right-loading{
-            height: 225px;
-        }
-        .logo-loading{
-            position: absolute;
-            width: 240px;
-            z-index: 1000;
-            top: 35%;
-            transform: translate(-120px,0);
-        }
-        /*#logo-l-2{*/
-        /*    -webkit-filter: grayscale(1) brightness(100);*/
-        /*}*/
-        @keyframes change-gray {
-            0%{
-
-                -webkit-filter: grayscale(1) brightness(100);
-            }
-
-            50%{
-                -webkit-filter: grayscale(1) brightness(100);
-            }
-            51%{
-                -webkit-filter: none;
-            }
-
-            100%{
-                -webkit-filter: none;
-            }
-
-        }
-        #logo-l-1{
-            animation: change-gray 3.2s  infinite  0.2s;
-        }
-    </style>
     <style type="text/css">
         /*页脚颜色定制*/
         footer{
@@ -361,33 +112,17 @@
 <body class="all-body" style="overflow: hidden">
 <!-- loading begin-->
 <div id="loading-cover">
-    <img src="static/img/logo1.png" alt="logo1" class="logo-loading" id="logo-l-1" />
-    <!--    <img src="static/img/logo1.png" alt="logo2" class="logo-loading" id="logo-l-2" />-->
-    <div class="loading-list">
-        <!--        <div class="loading loading2" id="left-loading">-->
-        <!--            <div class="wrapper">-->
-        <!--                <div class="item"></div>-->
-        <!--                <div class="item"></div>-->
-        <!--                <div class="item"></div>-->
-        <!--                <div class="item"></div>-->
-        <!--                <div class="item"></div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <div class="loading loading4">
-            <div class="item">
 
-            </div>
+    <div class="hex-border">
+        <div class="hexagons">
+            <div class="hexagon"></div>
+            <div class="hexagon"></div>
+            <div class="hexagon"></div>
+            <div class="hexagon"></div>
+            <div class="hexagon"></div>
+            <div class="hexagon"></div>
+            <div class="hexagon"></div>
         </div>
-        <!--        <div class="loading loading2" id="right-loading">-->
-        <!--            <div class="wrapper">-->
-        <!--                <div class="item"></div>-->
-        <!--                <div class="item"></div>-->
-        <!--                <div class="item"></div>-->
-        <!--                <div class="item"></div>-->
-        <!--                <div class="item"></div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-
     </div>
 </div>
 <!-- loading end -->
@@ -395,38 +130,59 @@
 <nav>
     <div class="nav-wrapper">
         <ul id="topbar">
-            <li class="main-menu"><a class="main-menu-btn" href="index.html">Home</a> </li>
+            <li class="main-menu"><a  href="index.html"> <img  src="static/img/logo1.png" alt="logo"  />  </a> </li>
             <li class="main-menu">
-                <a class="main-menu-btn" href="#">Project <i class="fa fa-caret-down" style="font-size:24px"></i></a>
-                <ol class="submenu">
+                <a class="main-menu-btn" href="#" style="margin-left: -30px">PROJECT <i class="fa fa-caret-down" style="font-size:24px"></i></a>
+                <ol class="submenu" style="margin-left: -30px">
                     <li><a href="#">Description</a></li>
                     <li><a href="#">Design</a></li>
-                    <li><a href="#">Experiment</a></li>
-                    <li><a href="#">Notebook</a></li>
-                    <li><a href="#">Results</a></li>
+                    <li><a href="#">Parts</a></li>
+                    <li><a href="#">Improvement</a></li>
                 </ol>
             </li>
-            <li class="main-menu"><a class="main-menu-btn" href="#">Parts<i class="fa fa-caret-down" style="font-size:24px"></i></a>
+            <li class="main-menu"><a class="main-menu-btn" href="#">RESULTS<i class="fa fa-caret-down" style="font-size:24px"></i></a>
                 <ol class="submenu">
-                    <li><a href="#">Contributions</a></li>
+                    <li><a href="#">Demonstrate</a></li>
+                    <li><a href="#">Contribution</a></li>
+                    <li><a href="#">Engineering<br/>Success</a></li>
+                    <li><a href="#">Proposed<br/>Implementaion</a></li>
 
                 </ol>
             </li>
-            <li class="main-menu"><a class="main-menu-btn" href="#">Human&nbsp;Practices</a> </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">WET LAB<i class="fa fa-caret-down" style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Measurement</a></li>
+                    <li><a href="#">Notebook</a></li>
+                    <li><a href="#">Safety</a></li>
+                    <li><a href="#">Methods</a></li>
+
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">DRY LAB<i class="fa fa-caret-down" style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Modeling</a></li>
+
+                </ol>
+            </li>
             <li class="main-menu"><a class="main-menu-btn" href="#">Team<i class="fa fa-caret-down" style="font-size:24px"></i></a>
                 <ol class="submenu">
-                    <li><a href="team_members.html">Member</a></li>
-                    <li><a href="#">Lab&School</a></li>
-                    <li><a href="#">Collabrations</a></li>
-                </ol>
-            </li>
-            <li class="main-menu"><a class="main-menu-btn" href="#">About<i class="fa fa-caret-down" style="font-size:24px"></i></a>
-                <ol class="submenu">
+                    <li><a href="team_members.html">Members</a></li>
                     <li><a href="#">Attributions</a></li>
-                    <li><a href="#">Demonstrate</a></li>
+                    <li><a href="#">Collabrations</a></li>
+                    <li><a href="#">Sponsors</a></li>
+
                 </ol>
             </li>
-            <li class="main-menu"><a class="main-menu-btn" href="#">Judging&nbsp;Form</a> </li>
+            <li class="main-menu"><a class="main-menu-btn" style="font-size: 13px;vertical-align: middle" href="#">HUMAN<br/>PRACTICES<i class="fa fa-caret-down" style="font-size:20px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Integrated HP</a></li>
+                    <li><a href="#">Collaboration</a></li>
+                    <li><a href="#">Partnership</a></li>
+                    <li><a href="#">Education&<br/>Engagement</a></li>
+
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">Judging Form</a> </li>
 
         </ul>
     </div>
