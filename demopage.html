@@ -19,17 +19,22 @@
     <script src='static/js/gsap.min.js'></script>
 <!--    <script src="static/js/bg_stars.js"></script>-->
     <script>
+        window.onload = function (){
+            $("nav").hide();;
+
+            $(".team-container").hide();
+            scrollM(0,0);
+        }
 
         document.onreadystatechange = function () {
             if(document.readyState == "complete"){
                 setTimeout(function () {
 
-
-                    $(".team-container").hide();
                     $("#loading-cover").slideUp(700);
 
                     document.getElementById("body-content").style.visibility = "visible";
                     $(".all-body").css({"overflow": "scroll"});
+                    $("nav").show();
                     $(".team-container").show();
 
                 },2400)
@@ -62,13 +67,14 @@
 
     </style>
     <script type="text/javascript">
+
         window.onscroll = function (){
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             var menu = document.getElementsByClassName('article-menu')[0];
             var menu_titles = document.getElementsByClassName('menu-titles');
 
             // 导航栏附着判断
-            if(scrollTop > 500 && scrollTop <= 6150){
+            if(scrollTop > 500 && scrollTop <= 6050){
                 menu.style.position = 'fixed';
                 menu.style.top = "150px";
             }else if(scrollTop <= 500){
@@ -76,19 +82,19 @@
                 menu.style.top = "650px";
             }else {
                 menu.style.position = 'absolute';
-                menu.style.top = "6300px";
+                menu.style.top = "6200px";
             }
             // 导航栏主题颜色判断
-            if (scrollTop < 500){
+            if (scrollTop < 400){
                 menu_titles[0].style.borderWidth = "0px";
                 menu_titles[0].style.fontWeight = 'normal';
             }
-            else if(scrollTop >= 500 && scrollTop < 3800){
+            else if(scrollTop >= 400 && scrollTop < 3700){
                 menu_titles[0].style.borderWidth = "3px";
                 menu_titles[0].style.fontWeight = 'bold';
                 menu_titles[1].style.borderWidth = "0px";
                 menu_titles[1].style.fontWeight = 'normal';
-            }else if (scrollTop >=3800 && scrollTop < 5250 ){
+            }else if (scrollTop >=3700 && scrollTop < 5140 ){
 
                 menu_titles[0].style.borderWidth = "0px";
                 menu_titles[0].style.fontWeight = 'normal';
@@ -96,7 +102,7 @@
                 menu_titles[1].style.fontWeight = 'bold';
                 menu_titles[2].style.borderWidth = "0px";
                 menu_titles[2].style.fontWeight = 'normal';
-            } else if (scrollTop >= 5250 ){
+            } else if (scrollTop >= 5140 ){
 
                     menu_titles[1].style.borderWidth = "0px";
                     menu_titles[1].style.fontWeight = 'normal';
@@ -208,13 +214,13 @@
     <!--team-name end-->
     <!--主页内容-->
     <div class="article-menu">
-        <div class="menu-titles" onclick="scrollControl(500)">
+        <div class="menu-titles" onclick="scrollControl(400)">
             Trash entry <p>- Smart sorting box</p>
         </div>
-        <div class="menu-titles" onclick="scrollControl(3800)">
+        <div class="menu-titles" onclick="scrollControl(3700)">
             Joint activities<p> - Roadside activities with the GREEN club of BUCT</p>
         </div>
-        <div class="menu-titles" onclick="scrollControl(5270)">
+        <div class="menu-titles" onclick="scrollControl(5140)">
             Knowledge sharing on synthetic biology
         </div>
     </div>

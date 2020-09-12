@@ -57,6 +57,10 @@ nav{
 
     font-weight: bold;
 }
+.main-menu{
+    height: 70px !important;
+}
+
 .main-menu-btn:hover{
     color: white;
 }
@@ -69,7 +73,7 @@ nav{
     top: -3px;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 50px ;
     z-index: -1;
     border-top: 1px solid #55efc4;
     border-bottom: 1px solid #55efc4;

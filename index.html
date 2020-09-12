@@ -25,28 +25,22 @@
     <script src="static/js/bg_stars.js"></script>
 
     <script>
+        window.onload = function (){
+            $("nav").hide();;
 
-        // setInterval(function () {
-        //
-        //     if($("#logo-l-2").is(":hidden")){
-        //         $("#logo-l-1").hide()
-        //         $("#logo-l-2").show()
-        //     }else{
-        //         $("#logo-l-2").hide()
-        //         $("#logo-l-1").show()
-        //     }
-        // },1600)
+            $(".team-container").hide();
+            scrollM(0,0);
+        }
 
         document.onreadystatechange = function () {
             if(document.readyState == "complete"){
                  setTimeout(function () {
 
-
-                    $(".team-container").hide();
                     $("#loading-cover").slideUp(700);
 
                      document.getElementById("body-content").style.visibility = "visible";
                      $(".all-body").css({"overflow": "scroll"});
+                     $("nav").show();
                      $(".team-container").show();
 
                  },2400)

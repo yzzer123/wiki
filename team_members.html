@@ -22,33 +22,27 @@
     <script type="text/javascript" src="static/js/lizi.js"></script>
     <script type="text/javascript" src="static/js/teacher_card.js"></script>
     <script>
+        window.onload = function (){
+            $("nav").hide();;
 
+            $(".team-container").hide();
+            scrollM(0,0);
+        }
 
-        // loader
         document.onreadystatechange = function () {
             if(document.readyState == "complete"){
                 setTimeout(function () {
 
-
-                    $(".team-container").hide();
                     $("#loading-cover").slideUp(700);
 
                     document.getElementById("body-content").style.visibility = "visible";
                     $(".all-body").css({"overflow": "scroll"});
+                    $("nav").show();
                     $(".team-container").show();
 
                 },2400)
             }
         }
-        // teacher card initialization
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-7243260-2']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
     </script>
 </head>
 
