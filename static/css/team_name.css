@@ -26,19 +26,19 @@
 
 .team-container .text:nth-child(4n + 1) {
     stroke: rgb(39, 135, 238);
-    animation: text1 4s ease-in-out forwards;
+    animation: text1 4s 1s ease-in-out forwards;
 }
 .team-container .text:nth-child(4n + 2) {
     stroke: rgb(235, 61, 50);
-    animation: text2 4s ease-in-out forwards;
+    animation: text2 4s 1s ease-in-out forwards;
 }
 .team-container .text:nth-child(4n + 3) {
     stroke: rgb(249, 189, 56);
-    animation: text3 4s ease-in-out forwards;
+    animation: text3 4s 1s ease-in-out forwards;
 }
 .team-container .text:nth-child(4n + 4) {
     stroke: rgb(47, 169, 92);
-    animation: text4 4s ease-in-out forwards;
+    animation: text4 4s 1s ease-in-out forwards;
 }
 
 @keyframes text1 {

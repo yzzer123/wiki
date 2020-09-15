@@ -20,7 +20,7 @@ function scrollMove(){
 var scrollM=scrollMove();
 
 function scrollControl(n){
-    scrollM(n,200);
+    scrollM(n,130);
 }
 
 window.onscroll = function (){
