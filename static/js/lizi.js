@@ -1,4 +1,4 @@
-window.onload = init;
+// window.onload = init;
 console.ward = function() {}; // what warnings?
 
 function init() {
@@ -16,20 +16,20 @@ function init() {
   var height = 60;
 
   var slide = new Slide(width, height, 'out');
-	var l1 = new THREE.ImageLoader();
-	l1.setCrossOrigin('Anonymous');
-	l1.load('static/img/BUCT.jpg', function(img) {
-	  slide.setImage(img);
-	})
+  var l1 = new THREE.ImageLoader();
+  l1.setCrossOrigin('Anonymous');
+  l1.load('static/img/BUCT.jpg', function(img) {
+    slide.setImage(img);
+  })
   root.scene.add(slide);
 
   var slide2 = new Slide(width, height, 'in');
   var l2 = new THREE.ImageLoader();
-	l2.setCrossOrigin('Anonymous');
-	l2.load('static/img/members.jpg', function(img) {
-		slide2.setImage(img);
-	})
-	
+  l2.setCrossOrigin('Anonymous');
+  l2.load('static/img/members.jpg', function(img) {
+    slide2.setImage(img);
+  })
+
   root.scene.add(slide2);
 
 
@@ -159,41 +159,41 @@ function Slide(width, height, animationPhase) {
   }
 
   var material = new THREE.BAS.BasicAnimationMaterial(
-    {
-      shading: THREE.FlatShading,
-      side: THREE.DoubleSide,
-      uniforms: {
-        uTime: {type: 'f', value: 0}
+      {
+        shading: THREE.FlatShading,
+        side: THREE.DoubleSide,
+        uniforms: {
+          uTime: {type: 'f', value: 0}
+        },
+        shaderFunctions: [
+          THREE.BAS.ShaderChunk['cubic_bezier'],
+          //THREE.BAS.ShaderChunk[(animationPhase === 'in' ? 'ease_out_cubic' : 'ease_in_cubic')],
+          THREE.BAS.ShaderChunk['ease_in_out_cubic'],
+          THREE.BAS.ShaderChunk['quaternion_rotation']
+        ],
+        shaderParameters: [
+          'uniform float uTime;',
+          'attribute vec2 aAnimation;',
+          'attribute vec3 aStartPosition;',
+          'attribute vec3 aControl0;',
+          'attribute vec3 aControl1;',
+          'attribute vec3 aEndPosition;',
+        ],
+        shaderVertexInit: [
+          'float tDelay = aAnimation.x;',
+          'float tDuration = aAnimation.y;',
+          'float tTime = clamp(uTime - tDelay, 0.0, tDuration);',
+          'float tProgress = ease(tTime, 0.0, 1.0, tDuration);'
+          //'float tProgress = tTime / tDuration;'
+        ],
+        shaderTransformPosition: [
+          (animationPhase === 'in' ? 'transformed *= tProgress;' : 'transformed *= 1.0 - tProgress;'),
+          'transformed += cubicBezier(aStartPosition, aControl0, aControl1, aEndPosition, tProgress);'
+        ]
       },
-      shaderFunctions: [
-        THREE.BAS.ShaderChunk['cubic_bezier'],
-        //THREE.BAS.ShaderChunk[(animationPhase === 'in' ? 'ease_out_cubic' : 'ease_in_cubic')],
-        THREE.BAS.ShaderChunk['ease_in_out_cubic'],
-        THREE.BAS.ShaderChunk['quaternion_rotation']
-      ],
-      shaderParameters: [
-        'uniform float uTime;',
-        'attribute vec2 aAnimation;',
-        'attribute vec3 aStartPosition;',
-        'attribute vec3 aControl0;',
-        'attribute vec3 aControl1;',
-        'attribute vec3 aEndPosition;',
-      ],
-      shaderVertexInit: [
-        'float tDelay = aAnimation.x;',
-        'float tDuration = aAnimation.y;',
-        'float tTime = clamp(uTime - tDelay, 0.0, tDuration);',
-        'float tProgress = ease(tTime, 0.0, 1.0, tDuration);'
-        //'float tProgress = tTime / tDuration;'
-      ],
-      shaderTransformPosition: [
-        (animationPhase === 'in' ? 'transformed *= tProgress;' : 'transformed *= 1.0 - tProgress;'),
-        'transformed += cubicBezier(aStartPosition, aControl0, aControl1, aEndPosition, tProgress);'
-      ]
-    },
-    {
-      map: new THREE.Texture(),
-    }
+      {
+        map: new THREE.Texture(),
+      }
   );
 
   THREE.Mesh.call(this, geometry, material);
@@ -269,10 +269,10 @@ function THREERoot(params) {
   document.getElementById('three-container').appendChild(this.renderer.domElement);
 
   this.camera = new THREE.PerspectiveCamera(
-    params.fov,
-    window.innerWidth / window.innerHeight,
-    params.zNear,
-    params.zfar
+      params.fov,
+      window.innerWidth / window.innerHeight,
+      params.zNear,
+      params.zfar
   );
 
   this.scene = new THREE.Scene();
