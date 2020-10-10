@@ -1,4 +1,7 @@
-
+.virus-container{
+  width: 100%;
+  margin-top: 250px;
+}
 
 .covid-wrapper {
   position: absolute;
@@ -12,8 +15,8 @@
 
 
 .covid {
-  background-image: url("../img/dark-stripes.png"), -webkit-gradient(linear, right bottom, left top, from(#9d1231), color-stop(#ae1a38), color-stop(#be2240), color-stop(#d02a47), color-stop(#e1324f), color-stop(#ea4153), color-stop(#f34e58), color-stop(#fc5b5d), color-stop(#fd6e61), color-stop(#fe7f68), color-stop(#ff8f70), to(#ff9e7a));
-  background-image: url("../img/dark-stripes.png"), linear-gradient(to left top, #9d1231, #ae1a38, #be2240, #d02a47, #e1324f, #ea4153, #f34e58, #fc5b5d, #fd6e61, #fe7f68, #ff8f70, #ff9e7a);
+  background-image: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), -webkit-gradient(linear, right bottom, left top, from(#9d1231), color-stop(#ae1a38), color-stop(#be2240), color-stop(#d02a47), color-stop(#e1324f), color-stop(#ea4153), color-stop(#f34e58), color-stop(#fc5b5d), color-stop(#fd6e61), color-stop(#fe7f68), color-stop(#ff8f70), to(#ff9e7a));
+  background-image: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), linear-gradient(to left top, #9d1231, #ae1a38, #be2240, #d02a47, #e1324f, #ea4153, #f34e58, #fc5b5d, #fd6e61, #fe7f68, #ff8f70, #ff9e7a);
   width: 410px;
   height: 410px;
   z-index: 2;
@@ -63,7 +66,7 @@
 
 
 .covid-spot {
-  background-image: url("../img/dark-stripes.png");
+  background-image: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png");
   background-color: #7f0918;
   position: absolute;
   border-radius: 50%;
@@ -121,8 +124,8 @@
   width: 6px;
   z-index: -1;
   height: 50px;
-  background-image: url("../img/dark-stripes.png"), -webkit-gradient(linear, right bottom, left top, from(#9d1231), color-stop(#ae1a38), color-stop(#be2240), color-stop(#d02a47), color-stop(#e1324f), color-stop(#ea4153), color-stop(#f34e58), color-stop(#fc5b5d), color-stop(#fd6e61), color-stop(#fe7f68), color-stop(#ff8f70), to(#ff9e7a));
-  background-image: url("../img/dark-stripes.png"), linear-gradient(to left top, #9d1231, #ae1a38, #be2240, #d02a47, #e1324f, #ea4153, #f34e58, #fc5b5d, #fd6e61, #fe7f68, #ff8f70, #ff9e7a);
+  background-image: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), -webkit-gradient(linear, right bottom, left top, from(#9d1231), color-stop(#ae1a38), color-stop(#be2240), color-stop(#d02a47), color-stop(#e1324f), color-stop(#ea4153), color-stop(#f34e58), color-stop(#fc5b5d), color-stop(#fd6e61), color-stop(#fe7f68), color-stop(#ff8f70), to(#ff9e7a));
+  background-image: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), linear-gradient(to left top, #9d1231, #ae1a38, #be2240, #d02a47, #e1324f, #ea4153, #f34e58, #fc5b5d, #fd6e61, #fe7f68, #ff8f70, #ff9e7a);
 }
 
 .covid-stick:before {
@@ -130,8 +133,8 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  background-image: url("../img/dark-stripes.png"), -webkit-gradient(linear, right bottom, left top, from(#9d1231), color-stop(#ae1a38), color-stop(#be2240), color-stop(#d02a47), color-stop(#e1324f), color-stop(#ea4153), color-stop(#f34e58), color-stop(#fc5b5d), color-stop(#fd6e61), color-stop(#fe7f68), color-stop(#ff8f70), to(#ff9e7a));
-  background-image: url("../img/dark-stripes.png"), linear-gradient(to left top, #9d1231, #ae1a38, #be2240, #d02a47, #e1324f, #ea4153, #f34e58, #fc5b5d, #fd6e61, #fe7f68, #ff8f70, #ff9e7a);
+  background-image: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), -webkit-gradient(linear, right bottom, left top, from(#9d1231), color-stop(#ae1a38), color-stop(#be2240), color-stop(#d02a47), color-stop(#e1324f), color-stop(#ea4153), color-stop(#f34e58), color-stop(#fc5b5d), color-stop(#fd6e61), color-stop(#fe7f68), color-stop(#ff8f70), to(#ff9e7a));
+  background-image: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), linear-gradient(to left top, #9d1231, #ae1a38, #be2240, #d02a47, #e1324f, #ea4153, #f34e58, #fc5b5d, #fd6e61, #fe7f68, #ff8f70, #ff9e7a);
   top: 36px;
   right: -5px;
   border-radius: 50%;
@@ -221,7 +224,7 @@
   right: 315px;
   width: 52px;
   height: 52px;
-  background: url("../img/dark-stripes.png"), linear-gradient(305deg, #801015 0%, #aa3432 100%);
+  background: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), linear-gradient(305deg, #801015 0%, #aa3432 100%);
 }
 .covid-spot:nth-child(7) {
   top: 256px;
@@ -574,8 +577,8 @@
 
 .covid-cheek {
   position: absolute;
-  background-image: url("../img/gray-lines.png"), -webkit-gradient(linear, left top, right top, from(#fe6aa5), to(#fa417a));
-  background-image: url("../img/gray-lines.png"), linear-gradient(90deg, #fe6aa5 0%, #fa417a 100%);
+  background-image: url("https://2020.igem.org/wiki/images/d/d1/T--BUCT--gray-lines.png"), -webkit-gradient(linear, left top, right top, from(#fe6aa5), to(#fa417a));
+  background-image: url("https://2020.igem.org/wiki/images/d/d1/T--BUCT--gray-lines.png"), linear-gradient(90deg, #fe6aa5 0%, #fa417a 100%);
   width: 60px;
   height: 40px;
   top: 41%;
@@ -597,7 +600,7 @@
   z-index: 9;
   border-radius: 50%;
   overflow: hidden;
-  background-image: url("../img/igem.png") ;
+  background-image: url("https://2020.igem.org/wiki/images/3/32/T--BUCT--igem.png") ;
   background-position: center;
   background-size: contain;
 }
@@ -840,7 +843,7 @@
 
 .covid-arms {
   position: absolute;
-  background: url(../img/dark-stripes.png), #ff6a6a;
+  background: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), #ff6a6a;
   width: 87px;
   height: 35px;
   z-index: 12;
@@ -971,7 +974,7 @@
   bottom: 70px;
   -webkit-transform: rotate(146deg) skew(24deg, 5deg);
           transform: rotate(146deg) skew(24deg, 5deg);
-  background: url(../img/dark-stripes.png), #ff3d61;
+  background: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), #ff3d61;
 }
 
 .mask {
@@ -1159,8 +1162,8 @@
 
 
 .g-covid {
-  background-image: url("../img/dark-stripes.png"), -webkit-gradient(linear, right bottom, left top, from(#26ad65), to(#61dd9b));
-  background-image: url("../img/dark-stripes.png"), linear-gradient(to left top,#26ad65, #39be77,  #46ce85,#61dd9b);
+  background-image: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), -webkit-gradient(linear, right bottom, left top, from(#26ad65), to(#61dd9b));
+  background-image: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), linear-gradient(to left top,#26ad65, #39be77,  #46ce85,#61dd9b);
   width: 410px;
   height: 410px;
   z-index: 2;
@@ -1209,7 +1212,7 @@
 
 
 .g-covid-spot {
-  background-image: url("../img/dark-stripes.png");
+  background-image: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png");
   background-color: #17cf20;
   position: absolute;
   border-radius: 50%;
@@ -1254,7 +1257,7 @@
   right: 315px;
   width: 52px;
   height: 52px;
-  background: url("../img/dark-stripes.png"), linear-gradient(305deg, #10803b 0%, #32aa4c 100%);
+  background: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), linear-gradient(305deg, #10803b 0%, #32aa4c 100%);
 }
 .g-covid-spot:nth-child(7) {
   top: 256px;
@@ -1484,8 +1487,8 @@
 
 .g-covid-cheek {
   position: absolute;
-  background-image: url("../img/gray-lines.png"), -webkit-gradient(linear, left top, right top, from(#cafe6a), to(#7cfa41));
-  background-image: url("../img/gray-lines.png"), linear-gradient(90deg, #cafe6a 0%, #85fa41 100%);
+  background-image: url("https://2020.igem.org/wiki/images/d/d1/T--BUCT--gray-lines.png"), -webkit-gradient(linear, left top, right top, from(#cafe6a), to(#7cfa41));
+  background-image: url("https://2020.igem.org/wiki/images/d/d1/T--BUCT--gray-lines.png"), linear-gradient(90deg, #cafe6a 0%, #85fa41 100%);
   width: 60px;
   height: 40px;
   top: 41%;
@@ -1502,7 +1505,7 @@
 
 .g-covid-arms {
   position: absolute;
-  background: url(../img/dark-stripes.png), #23b610;
+  background: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), #23b610;
   width: 87px;
   height: 35px;
   z-index: 12;
@@ -1517,7 +1520,7 @@
   bottom: 70px;
   -webkit-transform: rotate(120deg) skew(24deg, 5deg);
   transform: rotate(120deg) skew(24deg, 5deg);
-  background: url(../img/dark-stripes.png), #24a513;
+  background: url("https://2020.igem.org/wiki/images/3/3d/T--BUCT--dark-strips.png"), #24a513;
 }
 
 

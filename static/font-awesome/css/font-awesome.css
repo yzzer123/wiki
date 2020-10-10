@@ -6,8 +6,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  src: url('https://2020.igem.org/wiki/images/5/51/T--BUCT--f-s.eot?v=4.7.0');
+  src: url('https://2020.igem.org/wiki/images/5/51/T--BUCT--f-s.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('https://2020.igem.org/wiki/images/5/52/T--BUCT--f-s1.woff?v=4.7.0') format('woff2'), url('https://2020.igem.org/wiki/images/2/2e/T--BUCT--f-s2.woff?v=4.7.0') format('woff'), url('https://2020.igem.org/wiki/images/d/d0/T--BUCT--f-s4.ttf?v=4.7.0') format('truetype'), url('https://2020.igem.org/wiki/images/5/5c/T--BUCT--f-s5.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }

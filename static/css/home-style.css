@@ -19,14 +19,15 @@
     margin-top: 70px;
 }
 .slide-title{
+    min-width: 150px;
+    text-align: center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 30px !important;
     color: white;
     background-image: linear-gradient(to right, #2f80ed,#56ccf2);
     line-height: 40px;
     padding: 30px;
-    text-align: center;
-    width: max-content;
+    width: fit-content;
     border-radius: 60px;
 }
 .slide-content-text{
@@ -42,6 +43,7 @@
     border: #009ad6 solid 2px;
     border-radius: 30px;
     direction: ltr;
+    background-color: rgb(250, 255, 250)!important;
 }
 .text-left{
     margin-left: 80px;

@@ -6,31 +6,44 @@ body{
     overflow-x: hidden !important;
     font-family: sans-serif;
     /*background: black;*/
-    background: rgb(250, 255, 250);
+    background-color: rgb(250, 255, 250)!important;
 }
 html,body{
     height: 100%;
     width: 100%;
 }
-nav{
+#buct-bar{
     z-index: 99;
     height: 86px;
     width: 95%;
     position: fixed;
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 10px;
+    margin-left: 70px;
     border-radius: 43px;
-    margin: 15px 0 0 2.5%;
-    top: 0;
+    top: 35px;
+    border: solid 1px #00b894;
+
 
 }
-.nav-wrapper{
-     height: 86px;
-     width: 100%;
-     padding: 0;
-     border: solid 1px #00b894;
-     border-radius: 43px;
- }
+
+#buct-bar:after{
+    content: '';
+    position: absolute;
+    top:-17px !important;
+    left: -10%!important;
+    border-radius: 43px;
+    z-index: -10;
+    height: 120px;
+    width: 120%;
+    filter:blur(20px);
+    background-color: rgba(255,255,255,0.9);
+    -webkit-filter:blur(20px);
+    -moz-filter:blur(20px);
+    -ms-filter:blur(20px);
+    -o-filter:blur(20px);
+
+}
 
 #topbar{
     position: relative;
@@ -40,35 +53,39 @@ nav{
     padding: 0;
     display: flex;
 }
-.main-menu-btn .fa{
+.main-menu .main-menu-btn .fa{
     margin-left: 8px;
 }
 #topbar li{
+    align-items: center;
+    justify-content: center;
     list-style: none;
 }
-.main-menu-btn {
+.main-menu .main-menu-btn {
+    align-items: center;
+    justify-content: center;
     position: relative;
     display: flex;
-    padding: 10px 25px;
+    padding: 10px 35px;
     /*margin: 20px 0px;*/
     margin-top: 20px;
     margin-bottom: 17px;
+    font-size: 15px;
     text-decoration: none;
     color: #00b894;
-
     font-weight: bold;
 }
-.main-menu{
+#topbar .main-menu{
     height: 70px !important;
 }
 
-.main-menu-btn:hover{
+.main-menu .main-menu-btn:hover{
     color: white;
 }
-#topbar .main-menu:hover ol.submenu{
+#topbar .main-menu:hover ol.buct-submenu{
     visibility: visible;
 }
-.main-menu-btn:before{
+.main-menu .main-menu-btn:before{
     content: '';
     position: absolute;
     top: -3px;
@@ -81,12 +98,12 @@ nav{
     transform: scaleY(2);
     opacity: 0;
 }
-.main-menu-btn:hover:before{
+.main-menu .main-menu-btn:hover:before{
     transform: scaleY(1.2);
     opacity: 1;
 }
 
-.main-menu-btn:after{
+.main-menu .main-menu-btn:after{
     content: '';
     position: absolute;
     top: 0;
@@ -102,27 +119,29 @@ nav{
 
     transition: .5s;
 }
-.main-menu-btn:hover:after{
+.main-menu .main-menu-btn:hover:after{
     transform: scale(1);
 
 }
 
 
-.submenu{
+.main-menu .buct-submenu{
     z-index: 1;
     position: relative;
     padding: 6px 15px;
+    left: -18px;
     top: 6px;
+    width: 120px;
     list-style: none;
     visibility: hidden;
     border-radius: 10px;
     background: rgba(246, 246, 242, 0.9);
     box-shadow: 5px 5px 5px rgba(223, 230, 233,1.0);
     -moz-box-shadow: 5px 5px 5px rgba(223, 230, 233,1.0);
-     -webkit-box-shadow: 5px 5px 5px rgba(223, 230, 233,1.0);
+    -webkit-box-shadow: 5px 5px 5px rgba(223, 230, 233,1.0);
 
 }
-.submenu a{
+.main-menu .buct-submenu a{
     text-decoration: none;
     font-weight: lighter;
     color: #00b894;
@@ -133,13 +152,13 @@ nav{
 
 
 }
-.submenu li{
+.main-menu .buct-submenu li{
     position: relative;
 
     margin: 10px 0px;
 
 }
-.submenu a:before{
+.main-menu .buct-submenu a:before{
     content: '';
     position: absolute;
     bottom: 12px;
@@ -152,12 +171,12 @@ nav{
     opacity: 0;
 
 }
-.submenu a:hover:before{
+.main-menu .buct-submenu a:hover:before{
     bottom: -8px;
     left:-8px;
     opacity: 1;
 }
-.submenu a:after{
+.main-menu .buct-submenu a:after{
     content: '';
     position: absolute;
     top: 12px;
@@ -170,15 +189,15 @@ nav{
     opacity: 0;
 
 }
-.submenu a:hover:after {
+.main-menu .buct-submenu a:hover:after {
     top: -8px;
     right: -8px;
     opacity: 1;
 }
-.submenu a:hover{
-    background: #11998e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #27c261, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #27c261, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.main-menu .buct-submenu a:hover{
+    background: #11998e !important;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #27c261, #11998e) !important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #27c261, #11998e) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     /*font-weight: bold;*/
     color: white;
@@ -197,14 +216,102 @@ nav{
 
 
 }
-.main-menu a img{
+#topbar .main-menu a .bar-logo{
     width: 215px;
     margin: -12px 0 0 -20px;
     border-radius: 42px;
     transition: box-shadow 0.4s ease-in-out;
 }
-.main-menu a img:hover{
+#topbar .main-menu a .bar-logo:hover{
     box-shadow:  8px 8px 16px #cccccc,
     -8px -8px 16px #ffffff;
     transition: box-shadow 0.4s ease-in-out;
+}
+
+#sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display:none; }
+#content { padding:0px; width:100%; margin-top:-7px; margin-left:0px; border:none;}
+body, html {background-color:white; width: 100%; height: 100%;}
+#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
+#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
+#top_menu_inside #bars_item {
+    position: absolute;
+    top: -30px !important;
+    left: -100px !important;
+    z-index: 100000 !important;
+    cursor: pointer;
+}
+#top_menu_inside #bars_item {
+    position: absolute;
+    top: -30px !important;
+    left: -100px !important;
+    z-index: 100000 !important;
+    cursor: pointer;
+}
+
+#sideMenu,
+#top_title {
+    display: none;
+}
+
+#content {
+    padding: 0px;
+    width: 100%;
+}
+
+body {
+    background-color: white;
+    margin: 0px;
+}
+
+#bodyContent h1 {
+    font-weight: 300 !important;
+}
+
+#bodyContent h1,
+#bodyContent h2,
+#bodyContent h3,
+#bodyContent h4,
+#bodyContent h5 {
+    margin-bottom: 0px;
+    border-bottom: none;
+}
+
+#bodyContent {
+    padding-right: 0px;
+}
+
+#globalWrapper {
+    font-size: 100%;
+    padding: 0px;
+    margin: -10px -20px -20px -20px;
+}
+
+.navbar-collapse {
+    padding-left: 0px;
+}
+
+#banner {
+    margin-top: 50px;
+}
+
+#sideMenu {
+    margin-top: 10px;
+}
+
+.navbar-nav .dropdown-menu,
+.navbar .dropdown-menu {
+    margin-top: 0;
+}
+
+.judges-will-not-evaluate {
+    width: 96.6%;
+    margin: 5px 15px;
+    display: block;
+    border: 4px solid #3399ff;
+    font-weight: bold;
+}
+
+.content_wrapper {
+    width: 100%;
+    height: 100vh;
 }

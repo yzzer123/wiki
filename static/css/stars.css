@@ -2,7 +2,10 @@
 .bg-star-container {
     width: 120%;
     height: 100%;
-    position: relative
+    position: fixed;
+    top: 100px;
+    left: -10%;
+    z-index: -9999;
 }
 
 .jellyfish {
