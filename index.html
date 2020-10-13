@@ -1,66 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>BUCT_IGEM</title>
+    <!-- 最新版本的 Bootstrap 核心 文件 -->
+    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
 
     <!--引入css文件-->
-<!--    <link href="https://2017.igem.org/wiki/index.php?title=Template:SCU_China/default_CSS&action=raw&ctype=text/css" type="text/css" rel="stylesheet" />-->
-    <link href="static/css/bar.css" rel="stylesheet" type="text/css">
-    <link href="static/css/home-style.css" rel="stylesheet" type="text/css">
-    <link href="static/css/loading.css" rel="stylesheet" type="text/css">
-    <link href="static/css/team_name.css" rel="stylesheet" type="text/css">
-    <link href="static/css/cell.css" rel="stylesheet" type="text/css">
-    <link href="static/css/stars.css" rel="stylesheet" type="text/css">
-    <link href="static/css/wave.css" rel="stylesheet" type="text/css">
-    <link href="static/css/footer.css" rel="stylesheet" type="text/css">
-
-    <script src="static/js/gsap.min.js"></script>
-    <script src="static/js/bg_stars.js"></script>
+    <link href="https://www.bootcss.com/p/buttons/css/buttons.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/bar.css" rel="stylesheet" type="text/css"/>
+    <link href="static/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="static/css/loading.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/team_name.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/cell.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/home-style.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/stars.css" rel="stylesheet"/>
+    <link href="static/css/wave.css" rel="stylesheet"/>
+    <link href="static/css/footer.css" rel="stylesheet"/>
+    <!-- JS 文件-->
     <script src="static/js/scroll.js"></script>
-        <link href="https://2020.igem.org/wiki/index.php?title=Template:BUCT/CSS/home-style&action=raw&ctype=text/css" type="text/css" rel="stylesheet" />
-    <link href="https://2020.igem.org/wiki/index.php?title=Template:BUCT/CSS/button&action=raw&ctype=text/css" type="text/css" rel="stylesheet"/>
-<!--&lt;!&ndash;    <link href="https://2020.igem.org/wiki/index.php?title=Template:BUCT/CSS/bar&action=raw&ctype=text/css" type="text/css" rel="stylesheet" />&ndash;&gt;-->
-<!--    <link href="https://2020.igem.org/wiki/index.php?title=Template:BUCT/CSS/font-awesome&action=raw&ctype=text/css" type="text/css" rel="stylesheet">-->
-
-    <link href="https://2020.igem.org/wiki/index.php?title=Template:BUCT/CSS/team_name&action=raw&ctype=text/css" type="text/css" rel="stylesheet" />
-    <link href="https://2020.igem.org/wiki/index.php?title=Template:BUCT/CSS/cell&action=raw&ctype=text/css" type="text/css" rel="stylesheet" />
-    <link href="https://2020.igem.org/wiki/index.php?title=Template:BUCT/CSS/stars&action=raw&ctype=text/css" type="text/css" rel="stylesheet" />
-    <link href="https://2020.igem.org/wiki/index.php?title=Template:BUCT/CSS/wave&action=raw&ctype=text/css" type="text/css" rel="stylesheet" />
-<!--    <link href="https://2020.igem.org/wiki/index.php?title=Template:BUCT/CSS/footer&action=raw&ctype=text/css" type="text/css" rel="stylesheet" />-->
-
-<!--    &lt;!&ndash; JS 文件&ndash;&gt;-->
-    <script src="https://2020.igem.org/wiki/index.php?title=Template:BUCT/JS/scroll&action=raw&ctype=text/javascript"></script>
-<!--    <script src="https://2020.igem.org/wiki/index.php?title=Template:BUCT/JS/gsap&action=raw&ctype=text/javascript"></script>-->
-<!--    <script src="https://2020.igem.org/wiki/index.php?title=Template:BUCT/JS/bg_stars&action=raw&ctype=text/javascript"></script>-->
-
     <script src="static/js/jquery.js"></script>
-
+    <script src='static/js/gsap.min.js'></script>
+    <script src="static/js/bg_stars.js"></script>
 
     <script>
-        window.onload = function (){
-            $(".buct-bar").hide();
+        window.onload = function () {
+            $("nav").hide();
+
 
             $(".team-container").hide();
-            scrollM(0,0);
+            scrollM(0, 0);
         }
 
         document.onreadystatechange = function () {
-            if(document.readyState == "complete"){
-                 setTimeout(function () {
+            if (document.readyState == "complete") {
+                setTimeout(function () {
 
                     $("#loading-cover").slideUp(700);
 
-                     document.getElementById("body-content").style.visibility = "visible";
-                     $("body").css({"overflow": "scroll"});
-                     $(".buct-bar").show();
-                     $(".team-container").show();
+                    document.getElementById("body-content").style.visibility = "visible";
+                    $(".all-body").css({"overflow": "scroll"});
+                    $("nav").show();
+                    $(".team-container").show();
 
-
-                 },2400)
+                }, 2400)
             }
         }
     </script>
-
-<body class="page-Team_BUCT" style="overflow: hidden">
+</head>
+<body class="all-body" style="overflow: hidden">
 <!-- loading begin-->
 
 <div id="loading-cover">
@@ -79,293 +68,299 @@
 </div>
 <!-- loading end -->
 <!--navigator begin-->
-<nav id="buct-bar">
-    <ul id="topbar">
-        <li class="main-menu"><a  href="https://2020.igem.org/Team:BUCT"> <img class="bar-logo" src="https://2020.igem.org/wiki/images/2/24/T--BUCT--logo1.png" alt="logo"  />  </a> </li>
-        <li class="main-menu">
-            <a class="main-menu-btn" href="#" style="margin-left: -30px">PROJECT <img src="https://2020.igem.org/wiki/images/f/fa/T--BUCT--arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></a>
-            <ol class="buct-submenu" style="margin-left: -30px">
-                <li><a href="https://2020.igem.org/Team:BUCT/Description">Description</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Design">Design</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Parts">Parts</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Improvement">Improvement</a></li>
-            </ol>
-        </li>
-        <li class="main-menu"><a class="main-menu-btn" href="#">RESULTS <img src="https://2020.igem.org/wiki/images/f/fa/T--BUCT--arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></i></a>
-            <ol class="buct-submenu">
-                <li><a href="https://2020.igem.org/Team:BUCT/Demonstrate">Demonstrate</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Contribution">Contribution</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Engineering">Engineering<br/>Success</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Implementation">Proposed<br/>Implementaion</a></li>
+<nav>
+    <div class="nav-wrapper">
+        <ul id="topbar">
+            <li class="main-menu"><a href="index.html"> <img alt="logo" src="static/img/logo1.png"/> </a></li>
+            <li class="main-menu">
+                <a class="main-menu-btn" href="#" style="margin-left: -30px">PROJECT <i class="fa fa-caret-down"
+                                                                                        style="font-size:24px"></i></a>
+                <ol class="submenu" style="margin-left: -30px">
+                    <li><a href="#">Description</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Parts</a></li>
+                    <li><a href="#">Improvement</a></li>
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">RESULTS<i class="fa fa-caret-down"
+                                                                              style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Demonstrate</a></li>
+                    <li><a href="#">Contribution</a></li>
+                    <li><a href="#">Engineering<br/>Success</a></li>
+                    <li><a href="#">Proposed<br/>Implementaion</a></li>
 
-            </ol>
-        </li>
-        <li class="main-menu"><a class="main-menu-btn" href="#">WET LAB <img src="https://2020.igem.org/wiki/images/f/fa/T--BUCT--arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></i></a>
-            <ol class="buct-submenu">
-                <li><a href="https://2020.igem.org/Team:BUCT/Measurement">Measurement</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Notebook">Notebook</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Safety">Safety</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Methods">Methods</a></li>
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">WET LAB<i class="fa fa-caret-down"
+                                                                              style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Measurement</a></li>
+                    <li><a href="#">Notebook</a></li>
+                    <li><a href="#">Safety</a></li>
+                    <li><a href="#">Methods</a></li>
 
-            </ol>
-        </li>
-        <li class="main-menu"><a class="main-menu-btn" href="#">DRY LAB <img src="https://2020.igem.org/wiki/images/f/fa/T--BUCT--arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></i></a>
-            <ol class="buct-submenu">
-                <li><a href="https://2020.igem.org/Team:BUCT/Modeling">Modeling</a></li>
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">DRY LAB<i class="fa fa-caret-down"
+                                                                              style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Modeling</a></li>
 
-            </ol>
-        </li>
-        <li class="main-menu"><a class="main-menu-btn" href="#">Team <img src="https://2020.igem.org/wiki/images/f/fa/T--BUCT--arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></a>
-            <ol class="buct-submenu">
-                <li><a href="https://2020.igem.org/Team:BUCT/Members">Members</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Attributions">Attributions</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/TCollabrations">Collabrations</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Sponsors">Sponsors</a></li>
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">Team<i class="fa fa-caret-down"
+                                                                           style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="team_members.html">Members</a></li>
+                    <li><a href="#">Attributions</a></li>
+                    <li><a href="#">Collabrations</a></li>
+                    <li><a href="#">Sponsors</a></li>
 
-            </ol>
-        </li>
-        <li class="main-menu"><a class="main-menu-btn" style="font-size: 13px;vertical-align: middle" href="#">HUMAN<br/>PRACTICES <img src="https://2020.igem.org/wiki/images/f/fa/T--BUCT--arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></a>
-            <ol class="buct-submenu">
-                <li><a href="https://2020.igem.org/Team:BUCT/Human_Practices">Integrated HP</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Collaboration">Collaboration</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Partnership">Partnership</a></li>
-                <li><a href="https://2020.igem.org/Team:BUCT/Education">Education&<br/>Engagement</a></li>
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#" style="font-size: 13px;vertical-align: middle">HUMAN<br/>PRACTICES<i
+                    class="fa fa-caret-down" style="font-size:20px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Integrated HP</a></li>
+                    <li><a href="#">Collaboration</a></li>
+                    <li><a href="#">Partnership</a></li>
+                    <li><a href="#">Education&<br/>Engagement</a></li>
 
-            </ol>
-        </li>
-        <li class="main-menu"><a class="main-menu-btn" href="#">Judging Form</a> </li>
+                </ol>
+            </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">Judging Form</a></li>
 
-    </ul>
-
+        </ul>
+    </div>
 </nav>
-
-
-
-
 <div style="width: 100%;height: 90px"></div>
 <!--navigator end -->
 <!--team-name begin-->
 <!-- background-stars -->
 
-<div class="bg-star-container"><canvas id="bubbles-canvas"></canvas>
-    <svg class="jellyfish"    viewBox="0 0 278.8 291.7">
-    <defs>
-        <style>
-            .cls-1 {
-                fill: #b2d1dc
-            }
+<div class="bg-star-container">
+    <canvas id="bubbles-canvas"></canvas>
+    <svg class="jellyfish" viewBox="0 0 278.8 291.7" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: #b2d1dc
+                }
 
-            .cls-2 {
-                fill: rgba(165, 191, 193, 0.5)
-            }
+                .cls-2 {
+                    fill: rgba(165, 191, 193, 0.5)
+                }
 
-            .cls-3 {
-                fill: #d5a2a2
-            }
+                .cls-3 {
+                    fill: #d5a2a2
+                }
 
-            .cls-4 {
-                fill: rgba(148, 199, 204, 0.8)
-            }
+                .cls-4 {
+                    fill: rgba(148, 199, 204, 0.8)
+                }
 
-            .cls-5 {
-                fill: rgba(147, 203, 223, 0.5)
-            }
+                .cls-5 {
+                    fill: rgba(147, 203, 223, 0.5)
+                }
 
-            .cls-6 {
-                fill: #93b8c4
-            }
+                .cls-6 {
+                    fill: #93b8c4
+                }
 
-            .cls-7 {
-                fill: #c9ecf8
-            }
+                .cls-7 {
+                    fill: #c9ecf8
+                }
 
-            .cls-8 {
-                fill: #dbf2f9
-            }
+                .cls-8 {
+                    fill: #dbf2f9
+                }
 
-            .cls-9 {
-                fill: #eea4a4
-            }
-        </style>
-    </defs>
+                .cls-9 {
+                    fill: #eea4a4
+                }
+            </style>
+        </defs>
 
-</svg></div><!-- partial -->
+    </svg>
+</div><!-- partial -->
 
 <!-- background-stars end -->
-<div id="body-content" style="visibility: hidden" >
-<div class="team-container" >
+<div id="body-content" style="visibility: hidden">
+    <div class="team-container">
 
 
-    <svg viewBox="0 0 1000 300" style="z-index: -80">
-        <symbol id="line-text">
-            <text text-anchor="middle" x="50%" y="50%" dy=".4em" >
-                BUCT
-            </text>
-        </symbol>
+        <svg style="z-index: -80" viewBox="0 0 1000 300">
+            <symbol id="line-text">
+                <text dy=".4em" text-anchor="middle" x="50%" y="50%">
+                    BUCT
+                </text>
+            </symbol>
 
-        <use xlink:href="#line-text" class="text"></use>
-        <use xlink:href="#line-text" class="text"></use>
-        <use xlink:href="#line-text" class="text"></use>
-        <use xlink:href="#line-text" class="text"></use>
-    </svg>
-    <div class="cell-wrapper">
+            <use class="text" xlink:href="#line-text"></use>
+            <use class="text" xlink:href="#line-text"></use>
+            <use class="text" xlink:href="#line-text"></use>
+            <use class="text" xlink:href="#line-text"></use>
+        </svg>
+        <div class="cell-wrapper">
 
-    <img class="big-virus"  src="https://2020.igem.org/wiki/images/2/2e/T--BUCT--virus.png"  />
-    <div class="covid-wrapper" style="z-index: -80">
-        <div class="viruses">
-            <div class="virus"></div>
-            <div class="virus"></div>
-            <div class="virus"></div>
-            <div class="virus"></div>
-            <div class="virus"></div>
-            <div class="virus"></div>
-            <div class="virus"></div>
-            <div class="virus"></div>
-            <div class="virus"></div>
-            <div class="virus"></div>
-        </div>
-        <div class="covid-arms"></div>
-        <div class="covid-arms right"></div>
+            <img class="big-virus" src="static/img/virus.png"/>
+            <div class="covid-wrapper" style="z-index: -80">
+                <div class="viruses">
+                    <div class="virus"></div>
+                    <div class="virus"></div>
+                    <div class="virus"></div>
+                    <div class="virus"></div>
+                    <div class="virus"></div>
+                    <div class="virus"></div>
+                    <div class="virus"></div>
+                    <div class="virus"></div>
+                    <div class="virus"></div>
+                    <div class="virus"></div>
+                </div>
+                <div class="covid-arms"></div>
+                <div class="covid-arms right"></div>
 
-        <div class="covid">
-            <div class="covid-spots">
-                <div class="covid-spot"></div>
-                <div class="covid-spot"></div>
-                <div class="covid-spot"></div>
-                <div class="covid-spot"></div>
-                <div class="covid-spot"></div>
-                <div class="covid-spot"></div>
-                <div class="covid-spot"></div>
-                <div class="covid-spot"></div>
-                <div class="covid-spot"></div>
-                <div class="covid-spot"></div>
-                <div class="covid-spot"></div>
+                <div class="covid">
+                    <div class="covid-spots">
+                        <div class="covid-spot"></div>
+                        <div class="covid-spot"></div>
+                        <div class="covid-spot"></div>
+                        <div class="covid-spot"></div>
+                        <div class="covid-spot"></div>
+                        <div class="covid-spot"></div>
+                        <div class="covid-spot"></div>
+                        <div class="covid-spot"></div>
+                        <div class="covid-spot"></div>
+                        <div class="covid-spot"></div>
+                        <div class="covid-spot"></div>
+                    </div>
+                    <div class="covid-eyes"></div>
+                    <div class="covid-eyes left"></div>
+                    <div class="covid-eyebrow"></div>
+                    <div class="covid-eyebrow right"></div>
+                    <div class="covid-mouth"></div>
+                    <div class="covid-cheek"></div>
+                    <div class="covid-cheek right"></div>
+                </div>
             </div>
-            <div class="covid-eyes"> </div>
-            <div class="covid-eyes left"></div>
-            <div class="covid-eyebrow"></div>
-            <div class="covid-eyebrow right"></div>
-            <div class="covid-mouth"></div>
-            <div class="covid-cheek"></div>
-            <div class="covid-cheek right"></div>
-        </div>
-    </div>
-    <div class="covid-pulse" style="z-index: -100">
-        <div class="covid-sticks" >
-            <div class="covid-stick" ></div>
-            <div class="covid-stick" ></div>
-            <div class="covid-stick"></div>
-            <div class="covid-stick"></div>
-            <div class="covid-stick"></div>
-            <div class="covid-stick"></div>
-            <div class="covid-stick"></div>
-            <div class="covid-stick"></div>
-            <div class="covid-stick"></div>
-            <div class="covid-stick"></div>
-            <div class="covid-stick"></div>
-            <div class="covid-stick"></div>
-            <div class="covid-stick"></div>
-        </div>
-    </div>
-    </div>
-    <div class="g-cell-wrapper">
-        <img class="big-virus2"  src="https://2020.igem.org/wiki/images/4/43/T--BUCT--virus2.png"  />
-    <div class="g-covid-wrapper" style="z-index: -80">
-        <div class="g-viruses">
-            <div class="g-virus"></div>
-            <div class="g-virus"></div>
-            <div class="g-virus"></div>
-            <div class="g-virus"></div>
-            <div class="g-virus"></div>
-            <div class="g-virus"></div>
-            <div class="g-virus"></div>
-            <div class="g-virus"></div>
-            <div class="g-virus"></div>
-            <div class="g-virus"></div>
-        </div>
-        <div class="g-covid-arms"></div>
-        <div class="g-covid-arms right"></div>
-        <div class="earth-wrapper">
-            <div class="earth-detail"></div>
-            <div class="earth">
-                <div class="covid-eyes earth-eyes"></div>
-                <div class="covid-eyes earth-eyes left"></div>
-                <div class= "earth-mouth"></div>
-
-
+            <div class="covid-pulse" style="z-index: -100">
+                <div class="covid-sticks">
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                    <div class="covid-stick"></div>
+                </div>
             </div>
         </div>
-        <div class="g-covid">
-            <div class="g-covid-spots">
-                <div class="g-covid-spot"></div>
-                <div class="g-covid-spot"></div>
-                <div class="g-covid-spot"></div>
-                <div class="g-covid-spot"></div>
-                <div class="g-covid-spot"></div>
-                <div class="g-covid-spot"></div>
-                <div class="g-covid-spot"></div>
-                <div class="g-covid-spot"></div>
-                <div class="g-covid-spot"></div>
-                <div class="g-covid-spot"></div>
-                <div class="g-covid-spot"></div>
+        <div class="g-cell-wrapper">
+            <img class="big-virus2" src="static/img/virus2.png"/>
+            <div class="g-covid-wrapper" style="z-index: -80">
+                <div class="g-viruses">
+                    <div class="g-virus"></div>
+                    <div class="g-virus"></div>
+                    <div class="g-virus"></div>
+                    <div class="g-virus"></div>
+                    <div class="g-virus"></div>
+                    <div class="g-virus"></div>
+                    <div class="g-virus"></div>
+                    <div class="g-virus"></div>
+                    <div class="g-virus"></div>
+                    <div class="g-virus"></div>
+                </div>
+                <div class="g-covid-arms"></div>
+                <div class="g-covid-arms right"></div>
+                <div class="earth-wrapper">
+                    <div class="earth-detail"></div>
+                    <div class="earth">
+                        <div class="covid-eyes earth-eyes"></div>
+                        <div class="covid-eyes earth-eyes left"></div>
+                        <div class="earth-mouth"></div>
+
+
+                    </div>
+                </div>
+                <div class="g-covid">
+                    <div class="g-covid-spots">
+                        <div class="g-covid-spot"></div>
+                        <div class="g-covid-spot"></div>
+                        <div class="g-covid-spot"></div>
+                        <div class="g-covid-spot"></div>
+                        <div class="g-covid-spot"></div>
+                        <div class="g-covid-spot"></div>
+                        <div class="g-covid-spot"></div>
+                        <div class="g-covid-spot"></div>
+                        <div class="g-covid-spot"></div>
+                        <div class="g-covid-spot"></div>
+                        <div class="g-covid-spot"></div>
+                    </div>
+                    <div class="g-covid-eyes"></div>
+                    <div class="g-covid-eyes left"></div>
+                    <div class="g-covid-eyebrow"></div>
+                    <div class="g-covid-eyebrow right"></div>
+                    <div class="g-covid-mouth"></div>
+                    <div class="g-covid-cheek"></div>
+                    <div class="g-covid-cheek right"></div>
+                </div>
             </div>
-            <div class="g-covid-eyes"> </div>
-            <div class="g-covid-eyes left"></div>
-            <div class="g-covid-eyebrow"></div>
-            <div class="g-covid-eyebrow right"></div>
-            <div class="g-covid-mouth"></div>
-            <div class="g-covid-cheek"></div>
-            <div class="g-covid-cheek right"></div>
+            <div class="g-covid-pulse" style="z-index: -100">
+
+            </div>
+
         </div>
-    </div>
-    <div class="g-covid-pulse" style="z-index: -100">
 
     </div>
-
-    </div>
-
-</div>
-<!--team-name end-->
-    <div class="wave-box" >
+    <!--team-name end-->
+    <div class="wave-box">
         <svg viewBox="0 0 120 28">
             <defs>
                 <filter id="goo">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
-                    <feColorMatrix in="blur" mode="matrix" values="
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="1"/>
+                    <feColorMatrix in="blur" mode="matrix" result="goo" values="
            1 0 0 0 0
            0 1 0 0 0
            0 0 1 0 0
-           0 0 0 13 -9" result="goo" />
-                    <xfeBlend in="SourceGraphic" in2="goo" />
+           0 0 0 13 -9"/>
+                    <xfeBlend in="SourceGraphic" in2="goo"/>
                 </filter>
-                <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+                <path d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z"
+                      id="wave"/>
             </defs>
 
-            <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use>
-            <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+            <use class="wave" id="wave3" x="0" xlink:href="#wave" y="-2"></use>
+            <use class="wave" id="wave2" x="0" xlink:href="#wave" y="0"></use>
 
 
             <g class="gooeff" filter="url(#goo)">
-                <circle class="drop drop1" cx="20" cy="2" r="8.8"  />
-                <circle class="drop drop2" cx="25" cy="2.5" r="7.5"  />
-                <circle class="drop drop3" cx="16" cy="2.8" r="9.2"  />
-                <circle class="drop drop4" cx="18" cy="2" r="8.8"  />
-                <circle class="drop drop5" cx="22" cy="2.5" r="7.5"  />
-                <circle class="drop drop6" cx="26" cy="2.8" r="9.2"  />
-                <circle class="drop drop1" cx="5" cy="4.4" r="8.8"  />
-                <circle class="drop drop2" cx="5" cy="4.1" r="7.5"  />
-                <circle class="drop drop3" cx="8" cy="3.8" r="9.2"  />
-                <circle class="drop drop4" cx="3" cy="4.4" r="8.8"  />
-                <circle class="drop drop5" cx="7" cy="4.1" r="7.5"  />
-                <circle class="drop drop6" cx="10" cy="4.3" r="9.2"  />
+                <circle class="drop drop1" cx="20" cy="2" r="8.8"/>
+                <circle class="drop drop2" cx="25" cy="2.5" r="7.5"/>
+                <circle class="drop drop3" cx="16" cy="2.8" r="9.2"/>
+                <circle class="drop drop4" cx="18" cy="2" r="8.8"/>
+                <circle class="drop drop5" cx="22" cy="2.5" r="7.5"/>
+                <circle class="drop drop6" cx="26" cy="2.8" r="9.2"/>
+                <circle class="drop drop1" cx="5" cy="4.4" r="8.8"/>
+                <circle class="drop drop2" cx="5" cy="4.1" r="7.5"/>
+                <circle class="drop drop3" cx="8" cy="3.8" r="9.2"/>
+                <circle class="drop drop4" cx="3" cy="4.4" r="8.8"/>
+                <circle class="drop drop5" cx="7" cy="4.1" r="7.5"/>
+                <circle class="drop drop6" cx="10" cy="4.3" r="9.2"/>
 
-                <circle class="drop drop1" cx="1.2" cy="5.4" r="8.8"  />
-                <circle class="drop drop2" cx="5.2" cy="5.1" r="7.5"  />
-                <circle class="drop drop3" cx="10.2" cy="5.3" r="9.2"  />
-                <circle class="drop drop4" cx="3.2" cy="5.4" r="8.8"  />
-                <circle class="drop drop5" cx="14.2" cy="5.1" r="7.5"  />
-                <circle class="drop drop6" cx="17.2" cy="4.8" r="9.2"  />
-                <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+                <circle class="drop drop1" cx="1.2" cy="5.4" r="8.8"/>
+                <circle class="drop drop2" cx="5.2" cy="5.1" r="7.5"/>
+                <circle class="drop drop3" cx="10.2" cy="5.3" r="9.2"/>
+                <circle class="drop drop4" cx="3.2" cy="5.4" r="8.8"/>
+                <circle class="drop drop5" cx="14.2" cy="5.1" r="7.5"/>
+                <circle class="drop drop6" cx="17.2" cy="4.8" r="9.2"/>
+                <use class="wave" id="wave1" x="0" xlink:href="#wave" y="1"/>
             </g>
             <!-- g mask="url(#xxx)">
             <path   id="wave1"  class="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
@@ -377,101 +372,129 @@
     <div class="wave-bottom"></div>
     <!--主页内容-->
     <div class="wiki-slide" style="margin-top: 120px">
-        <img src="https://2020.igem.org/wiki/images/d/dc/T--BUCT--cell1.png" alt="left-cell" class="slide-img" style="width: 400px" />
+        <img alt="left-cell" class="slide-img" src="static/img/cell1.png" style="width: 400px"/>
         <div class="slide-text">
-            <p class="slide-title text-left" >Phase separation system</p>
-            <p class="slide-content-text text-left" >We constructed the first artificial phase separation system ever in prokaryotes. These droplets in E.coli exhibit similar spherical shape and high fluidity as they were in eukaryotes. By creating membraneless organelles in a cell, phases could realize the redistribution of various targets, including proteins and small organic molecules.</p>
+            <p class="slide-title text-left">Phase separation system</p>
+            <p class="slide-content-text text-left">We constructed the first artificial phase separation system ever in
+                prokaryotes. These droplets in E.coli exhibit similar spherical shape and high fluidity as they were in
+                eukaryotes. By creating membraneless organelles in a cell, phases could realize the redistribution of
+                various targets, including proteins and small organic molecules.</p>
 
         </div>
     </div>
     <div class="wiki-slide" style="direction: rtl">
-        <img src="https://2020.igem.org/wiki/images/6/62/T--BUCT--cell2.png" alt="right-cell" class="slide-img"  />
+        <img alt="right-cell" class="slide-img" src="static/img/cell2.png"/>
         <div class="slide-text">
-            <p class="slide-title text-left" style="background-image: linear-gradient(to right, #fbc7d4, #9796f0);">Photo-activated switch</p>
-            <p class="slide-content-text text-left" style="border-color: #ab72e8" >We use laser as a switch to control our system in a high spatial-temporal resolution. Within a few seconds, target proteins would redistribute into existing phases. After incubated in dark for several minutes, targets can reverse to previous smear state.</p>
+            <p class="slide-title text-left" style="background-image: linear-gradient(to right, #fbc7d4, #9796f0);">
+                Photo-activated switch</p>
+            <p class="slide-content-text text-left" style="border-color: #ab72e8">We use laser as a switch to control
+                our system in a high spatial-temporal resolution. Within a few seconds, target proteins would
+                redistribute into existing phases. After incubated in dark for several minutes, targets can reverse to
+                previous smear state.</p>
 
-        </div>
-    </div>
-    <div class="wiki-slide"style="margin-top:-80px" >
-            <img src="https://2020.igem.org/wiki/images/a/a3/T--BUCT--cell3.png" alt="right-cell" class="slide-img"  style="width: 400px"  />
-            <div class="slide-text">
-                <p class="slide-title text-left" style="background-image: linear-gradient(to right, #ffafbd,#ffc3a0);">Modelling our system</p>
-                <p class="slide-content-text text-left" style="border-color: #e0ad7b" >
-                    We modelled the phase separation system and coupled enzymatic reactions using a differential equation model and a collision model of chemical reactions. The model conceptually explained how phase separation would regulate downstream reactions, and provided insights for enzyme concentration and phase separation system selection. In addition, an interactive interface based on the model is presented on our wiki.
-
-                </p>
-
-            </div>
-        </div>
-    <div class="wiki-slide" style="direction: rtl">
-        <img src="https://2020.igem.org/wiki/images/7/78/T--BUCT--cell4.png" alt="right-cell" class="slide-img"  style="width: 400px" />
-        <div class="slide-text">
-            <p class="slide-title text-left" style="background-image: linear-gradient(to right, #ffe259,#ffa751);">Downstream reactions</p>
-            <p class="slide-content-text text-left" style="border-color:#ffa751" >Enzymes of proper size could be recruited into phases by using photo-activated switch. Selecting substrates of proper solubility according to our model, we realized the regulation of enzymatic reactions.
-            </p>
-        </div>
-    </div>
-    <div class="wiki-slide" style="margin-top:-80px" >
-        <img src="https://2020.igem.org/wiki/images/d/d1/T--BUCT--cell5.png" alt="right-cell" class="slide-img"  style="width: 400px"  />
-        <div class="slide-text">
-            <p class="slide-title text-left" style="background-image: linear-gradient(to right, #f8ffae,#43c6ac);">Improvement</p>
-            <p class="slide-content-text text-left" style="border-color: #8dbd5c" >
-                Enrichment of CRY2 in phase include both homo-aggregation of itself and hetero-aggregation of CRY2 and CIB1. By introducing point mutation to C terminal of CRY2, we attenuate homo-aggregation of CRY2 in dark, increasing the threshold of light induction. This improvement may also be helpful for teams who want to modify the sensitivity of their light-controlled information-processing system.
-            </p>
-
-        </div>
-    </div>
-    <div class="wiki-slide" style="direction: rtl">
-        <img src="https://2020.igem.org/wiki/images/c/c3/T--BUCT--cell6.png" alt="right-cell" class="slide-img" style="width: 400px"  />
-        <div class="slide-text">
-            <p class="slide-title text-left" style="background-image: linear-gradient(to right, #a8ff78,#78ffd6);">More possibilities</p>
-            <p class="slide-content-text text-left" style="border-color:#90e263" >Upon introducing this powerful tool in E.coli, there are much more prosperous applications waiting to be developed. We propose that by isolating specific material in phase, a uniform E.coli colony could grow into a society with cell differentiation.</p>
         </div>
     </div>
     <div class="wiki-slide" style="margin-top:-80px">
-        <img src="https://2020.igem.org/wiki/images/8/8d/T--BUCT--cell7.png" alt="right-cell" class="slide-img"  style="width: 400px"   />
+        <img alt="right-cell" class="slide-img" src="static/img/cell3.png" style="width: 400px"/>
         <div class="slide-text">
-            <p class="slide-title text-left" style="background-image: linear-gradient(to right,#74ebd5,#acb6e5);">Hardware</p>
-            <p class="slide-content-text text-left" style="border-color: #acb6e5" >
-                Depending on the manner of reversible amplification in phase, specific proteins can be used to create a biological register. Responding to laser stimulation, the distribution of fluorescence proteins would change, resulting in the variation in FRET signal, which can be detected by fluorescence reader.
+            <p class="slide-title text-left" style="background-image: linear-gradient(to right, #ffafbd,#ffc3a0);">
+                Modelling our system</p>
+            <p class="slide-content-text text-left" style="border-color: #e0ad7b">
+                We modelled the phase separation system and coupled enzymatic reactions using a differential equation
+                model and a collision model of chemical reactions. The model conceptually explained how phase separation
+                would regulate downstream reactions, and provided insights for enzyme concentration and phase separation
+                system selection. In addition, an interactive interface based on the model is presented on our wiki.
+
             </p>
 
         </div>
     </div>
-    <button id="topButton" class="buct-button button-glow button-circle button-action button-jumbo" style="align-items: center" onclick="scrollControl(0)"><img src="https://2020.igem.org/wiki/images/3/3d/T--BUCT--arrow-up.png" style="margin-top: 15px" width="30px" /></button>
+    <div class="wiki-slide" style="direction: rtl">
+        <img alt="right-cell" class="slide-img" src="static/img/cell4.png" style="width: 400px"/>
+        <div class="slide-text">
+            <p class="slide-title text-left" style="background-image: linear-gradient(to right, #ffe259,#ffa751);">
+                Downstream reactions</p>
+            <p class="slide-content-text text-left" style="border-color:#ffa751">Enzymes of proper size could be
+                recruited into phases by using photo-activated switch. Selecting substrates of proper solubility
+                according to our model, we realized the regulation of enzymatic reactions.
+            </p>
+        </div>
+    </div>
+    <div class="wiki-slide" style="margin-top:-80px">
+        <img alt="right-cell" class="slide-img" src="static/img/cell5.png" style="width: 400px"/>
+        <div class="slide-text">
+            <p class="slide-title text-left" style="background-image: linear-gradient(to right, #f8ffae,#43c6ac);">
+                Improvement</p>
+            <p class="slide-content-text text-left" style="border-color: #8dbd5c">
+                Enrichment of CRY2 in phase include both homo-aggregation of itself and hetero-aggregation of CRY2 and
+                CIB1. By introducing point mutation to C terminal of CRY2, we attenuate homo-aggregation of CRY2 in
+                dark, increasing the threshold of light induction. This improvement may also be helpful for teams who
+                want to modify the sensitivity of their light-controlled information-processing system.
+            </p>
+
+        </div>
+    </div>
+    <div class="wiki-slide" style="direction: rtl">
+        <img alt="right-cell" class="slide-img" src="static/img/cell6.png" style="width: 400px"/>
+        <div class="slide-text">
+            <p class="slide-title text-left" style="background-image: linear-gradient(to right, #a8ff78,#78ffd6);">More
+                possibilities</p>
+            <p class="slide-content-text text-left" style="border-color:#90e263">Upon introducing this powerful tool in
+                E.coli, there are much more prosperous applications waiting to be developed. We propose that by
+                isolating specific material in phase, a uniform E.coli colony could grow into a society with cell
+                differentiation.</p>
+        </div>
+    </div>
+    <div class="wiki-slide" style="margin-top:-80px">
+        <img alt="right-cell" class="slide-img" src="static/img/cell7.png" style="width: 400px"/>
+        <div class="slide-text">
+            <p class="slide-title text-left" style="background-image: linear-gradient(to right,#74ebd5,#acb6e5);">
+                Hardware</p>
+            <p class="slide-content-text text-left" style="border-color: #acb6e5">
+                Depending on the manner of reversible amplification in phase, specific proteins can be used to create a
+                biological register. Responding to laser stimulation, the distribution of fluorescence proteins would
+                change, resulting in the variation in FRET signal, which can be detected by fluorescence reader.
+            </p>
+
+        </div>
+    </div>
+    <button class="button button-glow button-circle button-action button-jumbo" id="topButton"
+            onclick="scrollControl(0)"><i class="fa fa-angle-up"></i></button>
     <!--主页内容结束-->
 
     <!--脚注-->
     <footer>
-    <div class="container">
-        <div class="box">
-            <a class="img" href="#">
-                <img src="https://2020.igem.org/wiki/images/b/bc/T--BUCT--igem2.png" alt="igem_logo" />
+        <div class="container">
+            <div class="box">
+                <a class="img" href="#">
+                    <img alt="igem_logo" src="static/img/igem2.png"/>
 
-            </a>
-            <p>IGEM</p>
+                </a>
+                <p>IGEM</p>
+            </div>
+            <div class="box">
+                <a class="img" href="#">
+                    <img alt="team_logo" src="static/img/logo1.png"/>
+
+                </a>
+                <p>TEAM</p>
+            </div>
+            <div class="box">
+                <a class="img" href="#">
+                    <img alt="buct_logo" src="static/img/buct-logo2.png"/>
+
+                </a>
+                <p>BUCT</p>
+            </div>
+            <div class="box" style="margin-left: -30px">
+                <a class="img" href="#">
+                    <img alt="zhihu_logo" src="static/img/zhihu.png"/>
+
+                </a>
+                <p>ZhiHu</p>
+            </div>
         </div>
-        <div class="box">
-            <a class="img" href="#">
-                <img src="https://2020.igem.org/wiki/images/2/24/T--BUCT--logo1.png" alt="team_logo" />
-
-            </a>
-            <p>TEAM</p>
-        </div><div class="box">
-        <a class="img" href="#">
-            <img src="https://2020.igem.org/wiki/images/d/d7/T--BUCT--buct-logo2.png" alt="buct_logo" />
-
-        </a>
-        <p>BUCT</p>
-    </div><div class="box" style="margin-left: -30px">
-        <a class="img" href="#">
-            <img src="https://2020.igem.org/wiki/images/2/23/T--BUCT--zhihu.png" alt="zhihu_logo" />
-
-        </a>
-        <p>ZhiHu</p>
-    </div>
-    </div>
-        <p class="copyright">Copyright ©  2020  BUCT  All rights reserved.</p>
+        <p class="copyright">Copyright © 2020 BUCT All rights reserved.</p>
     </footer>
     <!--脚注结束-->
 </div>

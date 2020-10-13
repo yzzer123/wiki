@@ -43,7 +43,8 @@
     border: #009ad6 solid 2px;
     border-radius: 30px;
     direction: ltr;
-    background-color: rgb(250, 255, 250)!important;
+    background-color: white!important;
+
 }
 .text-left{
     margin-left: 80px;

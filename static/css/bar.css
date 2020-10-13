@@ -1,17 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    overflow-x: hidden !important;
-    font-family: sans-serif;
-    /*background: black;*/
-    background-color: rgb(250, 255, 250)!important;
-}
-html,body{
-    height: 100%;
-    width: 100%;
-}
+
 #buct-bar{
     z-index: 99;
     height: 86px;

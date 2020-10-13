@@ -1,4 +1,5 @@
 .members-container{
+
     font-family: 'Poppins', sans-serif !important;
     position: relative;
     width: 100%;
@@ -7,12 +8,17 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 30px;
-    margin: -5px auto;
+    margin: -5px auto !important;
     height: 2800px;
 
 }
+#three-container{
+
+    margin: 50px auto !important;
+
+}
 #three-container canvas{
-    margin-top: 50px;
+
     background-color:  rgb(250, 255, 250);
 
 }
@@ -68,7 +74,7 @@
     width: 100%;
     text-align: center;
     line-height: 120px;
-   text-transform: uppercase;
+    text-transform: uppercase;
     font-size: 65px;
     background: #00C9FF;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */

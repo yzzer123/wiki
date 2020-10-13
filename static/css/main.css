@@ -1,10 +1,23 @@
 
 #globalWrapper,#content,#HQ_page,#bodyContent{
     width: 100%;
-    background-color:  transparent;
+    background-color: transparent !important;
 
 }
 #body-content{
     width: 100%;
     margin-top: 100px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden !important;
+    font-family: sans-serif;
+    /*background: black;*/
+    background-color: rgb(250, 255, 250)!important;
+}
+html,body{
+    width: 100%;
 }

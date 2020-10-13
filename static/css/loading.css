@@ -1,11 +1,15 @@
+
+
+
 #loading-cover{
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 102vw;
     height: 100%;
     background: white;
     z-index: 12000;
 }
+
 body{
     --loading-green:#27c261;
 }

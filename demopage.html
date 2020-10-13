@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Article</title>
-    <link href="https://www.bootcss.com/p/buttons/css/buttons.css" type="text/css" rel="stylesheet"/>
-    <link href="static/css/bar.css" type="text/css" rel="stylesheet" />
-    <link href="static/font-awesome/css/font-awesome.css" type="text/css" rel="stylesheet">
-    <link href="static/css/team_name.css" type="text/css" rel="stylesheet" />
-    <link href="static/css/loading.css" type="text/css" rel="stylesheet" />
-    <link href="static/css/home-style.css" type="text/css" rel="stylesheet" />
-<!--    <link rel="stylesheet" href="static/css/stars.css">-->
-    <link rel="stylesheet" href="static/css/wave.css">
-    <link rel="stylesheet" href="static/css/page.css">
-    <link rel="stylesheet" href="static/css/footer.css"/>
+    <link href="https://www.bootcss.com/p/buttons/css/buttons.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/bar.css" rel="stylesheet" type="text/css"/>
+    <link href="static/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="static/css/team_name.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/loading.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/home-style.css" rel="stylesheet" type="text/css"/>
+    <!--    <link rel="stylesheet" href="static/css/stars.css">-->
+    <link href="static/css/wave.css" rel="stylesheet">
+    <link href="static/css/page.css" rel="stylesheet">
+    <link href="static/css/footer.css" rel="stylesheet"/>
 
     <script src="static/js/scroll.js"></script>
     <script src="static/js/jquery.js"></script>
     <script src='static/js/gsap.min.js'></script>
-<!--    <script src="static/js/bg_stars.js"></script>-->
+    <!--    <script src="static/js/bg_stars.js"></script>-->
     <script>
-        window.onload = function (){
-            $("nav").hide();;
+        window.onload = function () {
+            $("nav").hide();
+
 
             $(".team-container").hide();
-            scrollM(0,0);
+            scrollM(0, 0);
         }
 
         document.onreadystatechange = function () {
-            if(document.readyState == "complete"){
+            if (document.readyState == "complete") {
                 setTimeout(function () {
 
                     $("#loading-cover").slideUp(700);
@@ -37,64 +38,66 @@
                     $("nav").show();
                     $(".team-container").show();
 
-                },2400)
+                }, 2400)
             }
         }
     </script>
 
     <style type="text/css">
         /*页脚颜色定制*/
-        footer{
+        footer {
             margin-top: -40px;
             background-color: var(--col-deepblue);
         }
-        .wave-box{
+
+        .wave-box {
             margin-top: 200px;
         }
-        footer .container .box .img{
+
+        footer .container .box .img {
             background: #ccf6cc !important;
             box-shadow: 18px 18px 30px #add1ad,
             -18px -18px 30px #ebffeb !important;
         }
-        footer .container .box .img:hover{
+
+        footer .container .box .img:hover {
             background: #ccf6cc !important;
             box-shadow: 0px 0px 0px #add1ad,
-            0px 0px 0px  #ebffeb ,
+            0px 0px 0px #ebffeb,
             inset 18px 18px 30px #add1ad,
-            inset -18px -18px 30px #ebffeb!important;
+            inset -18px -18px 30px #ebffeb !important;
 
         }
 
     </style>
     <script type="text/javascript">
 
-        window.onscroll = function (){
+        window.onscroll = function () {
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             var menu = document.getElementsByClassName('article-menu')[0];
             var menu_titles = document.getElementsByClassName('menu-titles');
 
             // 导航栏附着判断
-            if(scrollTop > 500 && scrollTop <= 6050){
+            if (scrollTop > 500 && scrollTop <= 6050) {
                 menu.style.position = 'fixed';
                 menu.style.top = "150px";
-            }else if(scrollTop <= 500){
+            } else if (scrollTop <= 500) {
                 menu.style.position = 'absolute';
                 menu.style.top = "650px";
-            }else {
+            } else {
                 menu.style.position = 'absolute';
                 menu.style.top = "6200px";
             }
             // 导航栏主题颜色判断
-            if (scrollTop < 400){
+            if (scrollTop < 400) {
                 menu_titles[0].style.borderWidth = "0px";
                 menu_titles[0].style.fontWeight = 'normal';
-            }
-            else if(scrollTop >= 400 && scrollTop < 3700){
+            } else if (scrollTop >= 400 && scrollTop < 3700) {
                 menu_titles[0].style.borderWidth = "3px";
                 menu_titles[0].style.fontWeight = 'bold';
                 menu_titles[1].style.borderWidth = "0px";
                 menu_titles[1].style.fontWeight = 'normal';
-            }else if (scrollTop >=3700 && scrollTop < 5140 ){
+            } else if (scrollTop >= 3700 && scrollTop < 5140) {
 
                 menu_titles[0].style.borderWidth = "0px";
                 menu_titles[0].style.fontWeight = 'normal';
@@ -102,20 +105,20 @@
                 menu_titles[1].style.fontWeight = 'bold';
                 menu_titles[2].style.borderWidth = "0px";
                 menu_titles[2].style.fontWeight = 'normal';
-            } else if (scrollTop >= 5140 ){
+            } else if (scrollTop >= 5140) {
 
-                    menu_titles[1].style.borderWidth = "0px";
-                    menu_titles[1].style.fontWeight = 'normal';
+                menu_titles[1].style.borderWidth = "0px";
+                menu_titles[1].style.fontWeight = 'normal';
 
-                    menu_titles[2].style.borderWidth = "3px";
-                    menu_titles[2].style.fontWeight = 'bold';
-                }
+                menu_titles[2].style.borderWidth = "3px";
+                menu_titles[2].style.fontWeight = 'bold';
+            }
 
 
         }
     </script>
 </head>
-<body class="page-Team_BUCT" style="overflow: hidden">
+<body class="all-body" style="overflow: hidden">
 <!-- loading begin-->
 <div id="loading-cover">
 
@@ -136,59 +139,65 @@
 <nav>
     <div class="nav-wrapper">
         <ul id="topbar">
-            <li class="main-menu"><a  href="https://2020.igem.org/Team:BUCT"> <img class="bar-logo" src="https://2020.igem.org/wiki/images/2/24/T--BUCT--logo1.png" alt="logo"  />  </a> </li>
+            <li class="main-menu"><a href="index.html"> <img alt="logo" src="static/img/logo1.png"/> </a></li>
             <li class="main-menu">
-                <a class="main-menu-btn" href="#" style="margin-left: -30px">PROJECT <img src="static/img/arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></a>
-                <ol class="buct-submenu" style="margin-left: -30px">
-                    <li><a href="https://2020.igem.org/Team:BUCT/Description">Description</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Design">Design</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Parts">Parts</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Improvement">Improvement</a></li>
+                <a class="main-menu-btn" href="#" style="margin-left: -30px">PROJECT <i class="fa fa-caret-down"
+                                                                                        style="font-size:24px"></i></a>
+                <ol class="submenu" style="margin-left: -30px">
+                    <li><a href="#">Description</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Parts</a></li>
+                    <li><a href="#">Improvement</a></li>
                 </ol>
             </li>
-            <li class="main-menu"><a class="main-menu-btn" href="#">RESULTS <img src="static/img/arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></i></a>
-                <ol class="buct-submenu">
-                    <li><a href="https://2020.igem.org/Team:BUCT/Demonstrate">Demonstrate</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Contribution">Contribution</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Engineering">Engineering<br/>Success</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Implementation">Proposed<br/>Implementaion</a></li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">RESULTS<i class="fa fa-caret-down"
+                                                                              style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Demonstrate</a></li>
+                    <li><a href="#">Contribution</a></li>
+                    <li><a href="#">Engineering<br/>Success</a></li>
+                    <li><a href="#">Proposed<br/>Implementaion</a></li>
 
                 </ol>
             </li>
-            <li class="main-menu"><a class="main-menu-btn" href="#">WET LAB <img src="static/img/arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></i></a>
-                <ol class="buct-submenu">
-                    <li><a href="https://2020.igem.org/Team:BUCT/Measurement">Measurement</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Notebook">Notebook</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Safety">Safety</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Methods">Methods</a></li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">WET LAB<i class="fa fa-caret-down"
+                                                                              style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Measurement</a></li>
+                    <li><a href="#">Notebook</a></li>
+                    <li><a href="#">Safety</a></li>
+                    <li><a href="#">Methods</a></li>
 
                 </ol>
             </li>
-            <li class="main-menu"><a class="main-menu-btn" href="#">DRY LAB <img src="static/img/arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></i></a>
-                <ol class="buct-submenu">
-                    <li><a href="https://2020.igem.org/Team:BUCT/Modeling">Modeling</a></li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">DRY LAB<i class="fa fa-caret-down"
+                                                                              style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Modeling</a></li>
 
                 </ol>
             </li>
-            <li class="main-menu"><a class="main-menu-btn" href="#">Team <img src="static/img/arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></a>
-                <ol class="buct-submenu">
-                    <li><a href="https://2020.igem.org/Team:BUCT/Members">Members</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Attributions">Attributions</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/TCollabrations">Collabrations</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Sponsors">Sponsors</a></li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">Team<i class="fa fa-caret-down"
+                                                                           style="font-size:24px"></i></a>
+                <ol class="submenu">
+                    <li><a href="team_members.html">Members</a></li>
+                    <li><a href="#">Attributions</a></li>
+                    <li><a href="#">Collabrations</a></li>
+                    <li><a href="#">Sponsors</a></li>
 
                 </ol>
             </li>
-            <li class="main-menu"><a class="main-menu-btn" style="font-size: 13px;vertical-align: middle" href="#">HUMAN<br/>PRACTICES <img src="static/img/arrow-down.png" style="margin-left: 6px" width="20px" height="22px"/></a>
-                <ol class="buct-submenu">
-                    <li><a href="https://2020.igem.org/Team:BUCT/Human_Practices">Integrated HP</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Collaboration">Collaboration</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Partnership">Partnership</a></li>
-                    <li><a href="https://2020.igem.org/Team:BUCT/Education">Education&<br/>Engagement</a></li>
+            <li class="main-menu"><a class="main-menu-btn" href="#" style="font-size: 13px;vertical-align: middle">HUMAN<br/>PRACTICES<i
+                    class="fa fa-caret-down" style="font-size:20px"></i></a>
+                <ol class="submenu">
+                    <li><a href="#">Integrated HP</a></li>
+                    <li><a href="#">Collaboration</a></li>
+                    <li><a href="#">Partnership</a></li>
+                    <li><a href="#">Education&<br/>Engagement</a></li>
 
                 </ol>
             </li>
-            <li class="main-menu"><a class="main-menu-btn" href="#">Judging Form</a> </li>
+            <li class="main-menu"><a class="main-menu-btn" href="#">Judging Form</a></li>
 
         </ul>
     </div>
@@ -196,19 +205,19 @@
 <!--navigator end -->
 <!--team-name begin-->
 
-<div id="body-content" style="visibility: hidden" >
-    <div class="team-container" >
-        <svg viewBox="0 0 1000 300" style="z-index: -80"  >
+<div id="body-content" style="visibility: hidden">
+    <div class="team-container">
+        <svg style="z-index: -80" viewBox="0 0 1000 300">
             <symbol id="line-text">
-                <text text-anchor="middle" x="50%" y="20%" dy=".4em" >
+                <text dy=".4em" text-anchor="middle" x="50%" y="20%">
                     BUCT
                 </text>
             </symbol>
 
-            <use xlink:href="#line-text" class="text"></use>
-            <use xlink:href="#line-text" class="text"></use>
-            <use xlink:href="#line-text" class="text"></use>
-            <use xlink:href="#line-text" class="text"></use>
+            <use class="text" xlink:href="#line-text"></use>
+            <use class="text" xlink:href="#line-text"></use>
+            <use class="text" xlink:href="#line-text"></use>
+            <use class="text" xlink:href="#line-text"></use>
         </svg>
     </div>
     <!--team-name end-->
@@ -225,132 +234,184 @@
         </div>
     </div>
     <div class="article-content">
-        <h1 ><img src="static/img/star.png" alt="star" />Trash entry</h1>
+        <h1><img alt="star" src="static/img/star.png"/>Trash entry</h1>
         <p>
-            Our team contacted a company about waste recycling. Here, we give a brief introduction to the company. Beijing Jinghuan intelligent environmental protection technology co., LTD., an Internet enterprise under Beijing sanitation group, is engaged in waste resource utilization and waste classification information platform operation. They set up environmental recycling bins in communities, institutions and schools to build a network of urban waste sorting, recycling and transportation to solve the problem of city-level sorting and disposal, and ensure the supply of renewable resource materials. At the same time, based on the city classification and recycling network system of renewable resources, Jinghuan company has established a community comprehensive interactive service platform.
+            Our team contacted a company about waste recycling. Here, we give a brief introduction to the company.
+            Beijing Jinghuan intelligent environmental protection technology co., LTD., an Internet enterprise under
+            Beijing sanitation group, is engaged in waste resource utilization and waste classification information
+            platform operation. They set up environmental recycling bins in communities, institutions and schools to
+            build a network of urban waste sorting, recycling and transportation to solve the problem of city-level
+            sorting and disposal, and ensure the supply of renewable resource materials. At the same time, based on the
+            city classification and recycling network system of renewable resources, Jinghuan company has established a
+            community comprehensive interactive service platform.
         </p>
         <p>
-            Before visiting the cooperative community of Jinghuan company, we came to the headquarters of the company in September to discuss the current situation of garbage disposal in China and how to solve the problem of garbage disposal with different forces.
+            Before visiting the cooperative community of Jinghuan company, we came to the headquarters of the company in
+            September to discuss the current situation of garbage disposal in China and how to solve the problem of
+            garbage disposal with different forces.
         </p>
         <p>
-            Waste separation in China is still in the growth stage, and waste disposal is a large project with high investment, which needs the strength from all aspects. From the social sector, the company is developing more equipment for waste separation and treatment.From the perspective of education, researchers are exploring more theoretical mechanisms for garbage decomposition and recycling. In addition, our team introduced to them our project -- biodegradation of plastics, which has great practical significance for waste disposal. Our team discussed how to combine our research projects with the company's smart devices with the head of science and technology of jinghuan company. They expressed great interest in it, saying that if our project can be successfully marketed, it will effectively improve the situation of garbage pollution. We will further strengthen cooperation.
+            Waste separation in China is still in the growth stage, and waste disposal is a large project with high
+            investment, which needs the strength from all aspects. From the social sector, the company is developing
+            more equipment for waste separation and treatment.From the perspective of education, researchers are
+            exploring more theoretical mechanisms for garbage decomposition and recycling. In addition, our team
+            introduced to them our project -- biodegradation of plastics, which has great practical significance for
+            waste disposal. Our team discussed how to combine our research projects with the company's smart devices
+            with the head of science and technology of jinghuan company. They expressed great interest in it, saying
+            that if our project can be successfully marketed, it will effectively improve the situation of garbage
+            pollution. We will further strengthen cooperation.
         </p>
         <p>
-            When we asked them what supported the cause of environmental protection in China, they said it was "love". It was their first step that led to the thousands of steps that followed.
+            When we asked them what supported the cause of environmental protection in China, they said it was "love".
+            It was their first step that led to the thousands of steps that followed.
             <br/>
         </p>
         <div class="imgBox">
-            <img src="static/img/articles/demo/t--buct-china--human_practice1.jpg" />
-            <img src="static/img/articles/demo/t--buct-china--human_practice12.jpg" />
+            <img src="static/img/articles/demo/t--buct-china--human_practice1.jpg"/>
+            <img src="static/img/articles/demo/t--buct-china--human_practice12.jpg"/>
 
         </div>
         <p>
-            <img id="c-t-img-1" src="static/img/articles/demo/t--buct-china--human_practice2.jpg" />
+            <img id="c-t-img-1" src="static/img/articles/demo/t--buct-china--human_practice2.jpg"/>
 
-            Our team came to the cooperation community of Jinghuan company in early October and communicated with the project leader of practice department. The project leader introduced to us the working principle of his company's garbage sorting and recycling smart box. "Smart box" combines garbage sorting with smart CARDS, which can help people form a good habit of garbage sorting. Because there are weight sensors at the bottom that convert the amount of trash people put into a number, the smart card gets points every time. Moreover, these points can be converted into substantial goods, such as rice, flour, shopping vouchers and so on. It is a smart waste recycling bin based on the reward system.
+            Our team came to the cooperation community of Jinghuan company in early October and communicated with the
+            project leader of practice department. The project leader introduced to us the working principle of his
+            company's garbage sorting and recycling smart box. "Smart box" combines garbage sorting with smart CARDS,
+            which can help people form a good habit of garbage sorting. Because there are weight sensors at the bottom
+            that convert the amount of trash people put into a number, the smart card gets points every time. Moreover,
+            these points can be converted into substantial goods, such as rice, flour, shopping vouchers and so on. It
+            is a smart waste recycling bin based on the reward system.
             <br/>
 
         </p>
         <p>
-            <img id="c-t-img-2" src="static/img/articles/demo/t--buct-china--human_practice3.jpg" />
+            <img id="c-t-img-2" src="static/img/articles/demo/t--buct-china--human_practice3.jpg"/>
 
-            Our team came to the cooperation community of Jinghuan company in early October and communicated with the project leader of practice department. The project leader introduced to us the working principle of his company's garbage sorting and recycling smart box. "Smart box" combines garbage sorting with smart CARDS, which can help people form a good habit of garbage sorting. Because there are weight sensors at the bottom that convert the amount of trash people put into a number, the smart card gets points every time. Moreover, these points can be converted into substantial goods, such as rice, flour, shopping vouchers and so on. It is a smart waste recycling bin based on the reward system.
-
-        </p>
-
-        <h1><img src="static/img/star.png" alt="star" />Joint activities </h1>
-        <p>
-            Our team has been communicating with an environmental protection club of our school for a whole morning. We held a garbage recycling activity together, mainly for the recycling of plastic bottles, cans, waste paper and books, in order to convey the good meaning of garbage recycling to everyone.
-
-        </p>
-        <p>
-            In addition to the activities on campus, we contacted a recycling company in Beijing together with the association: Beijing tianlong tiantianjie renewable resources recycling co., LTD. We give these items to them, and they return us small, recycled gifts, such as recycled books, pencils, post-it notes, etc.
+            Our team came to the cooperation community of Jinghuan company in early October and communicated with the
+            project leader of practice department. The project leader introduced to us the working principle of his
+            company's garbage sorting and recycling smart box. "Smart box" combines garbage sorting with smart CARDS,
+            which can help people form a good habit of garbage sorting. Because there are weight sensors at the bottom
+            that convert the amount of trash people put into a number, the smart card gets points every time. Moreover,
+            these points can be converted into substantial goods, such as rice, flour, shopping vouchers and so on. It
+            is a smart waste recycling bin based on the reward system.
 
         </p>
+
+        <h1><img alt="star" src="static/img/star.png"/>Joint activities </h1>
         <p>
-            We arranged posters in the school to publicize the activity we held together. On the day of the activity, many students took their drinks bottles to exchange our small gifts. In return for participating in the activity, we also sent some green plants to them.
+            Our team has been communicating with an environmental protection club of our school for a whole morning. We
+            held a garbage recycling activity together, mainly for the recycling of plastic bottles, cans, waste paper
+            and books, in order to convey the good meaning of garbage recycling to everyone.
+
         </p>
         <p>
-            Students in the campus were attracted by us and asked us about this activity. In the future, we will hold similar recycling activities regularly to pass the "GREEN" message. When they knew that these recycled things could also be effectively recycled and made into small gifts we gave them, these students praised our activity as very meaningful and would support the activity in the future. Everyone on our team is happy and proud to be able to share this meaningful idea of recycling with others and influence one person.
+            In addition to the activities on campus, we contacted a recycling company in Beijing together with the
+            association: Beijing tianlong tiantianjie renewable resources recycling co., LTD. We give these items to
+            them, and they return us small, recycled gifts, such as recycled books, pencils, post-it notes, etc.
+
+        </p>
+        <p>
+            We arranged posters in the school to publicize the activity we held together. On the day of the activity,
+            many students took their drinks bottles to exchange our small gifts. In return for participating in the
+            activity, we also sent some green plants to them.
+        </p>
+        <p>
+            Students in the campus were attracted by us and asked us about this activity. In the future, we will hold
+            similar recycling activities regularly to pass the "GREEN" message. When they knew that these recycled
+            things could also be effectively recycled and made into small gifts we gave them, these students praised our
+            activity as very meaningful and would support the activity in the future. Everyone on our team is happy and
+            proud to be able to share this meaningful idea of recycling with others and influence one person.
 
 
         </p>
         <div class="imgBox">
-            <img src="static/img/articles/demo/t--buct-china--human_practice4.jpg" style="width: 30%; height: 200px" />
-            <img src="static/img/articles/demo/t--buct-china--human_practice5.jpg" style="width: 30%;height: 200px" />
-            <img src="static/img/articles/demo/t--buct-china--human_practice6.jpg" style="width: 30%;height: 200px" />
+            <img src="static/img/articles/demo/t--buct-china--human_practice4.jpg" style="width: 30%; height: 200px"/>
+            <img src="static/img/articles/demo/t--buct-china--human_practice5.jpg" style="width: 30%;height: 200px"/>
+            <img src="static/img/articles/demo/t--buct-china--human_practice6.jpg" style="width: 30%;height: 200px"/>
 
         </div>
         <h1 style="font-size: 2.5em">
-            <img src="static/img/star.png" alt="star" /></i>
+            <img alt="star" src="static/img/star.png"/></i>
             Knowledge sharing on synthetic biology
 
         </h1>
         <p>
-            In October, one of my team members proposed to hold a knowledge sharing meeting on biotechnology in our university. Everyone thought it was a good idea. Finally, we discussed and decided to give a sharing meeting on synthetic biology, which would be a good opportunity to introduce the biodegradation that our team is working on.
+            In October, one of my team members proposed to hold a knowledge sharing meeting on biotechnology in our
+            university. Everyone thought it was a good idea. Finally, we discussed and decided to give a sharing meeting
+            on synthetic biology, which would be a good opportunity to introduce the biodegradation that our team is
+            working on.
 
         </p>
         <p>
-            In the knowledge sharing meeting, Zehui Han introduced the development history, discipline foundation, application prospect and development status of synthetic biology to all students. We also introduced iGEM, a competition that attracts people who like biology, and shared what our project is about. Because plastic pollution is a global hot topic, so this topic is very interested, many students have expressed their views. In the meantime, we share our iGEM experience, inspire people to learn about synthetic biology, and find new team members for the 2020iGEM competition.
+            In the knowledge sharing meeting, Zehui Han introduced the development history, discipline foundation,
+            application prospect and development status of synthetic biology to all students. We also introduced iGEM, a
+            competition that attracts people who like biology, and shared what our project is about. Because plastic
+            pollution is a global hot topic, so this topic is very interested, many students have expressed their views.
+            In the meantime, we share our iGEM experience, inspire people to learn about synthetic biology, and find new
+            team members for the 2020iGEM competition.
         </p>
         <p>
-            The sharing meeting was held very successfully and attracted many students from our university, most of whom were also students majoring in biology, as well as many other majors, such as chemical engineering, material engineering, computer science and so on. At the end of the meeting, we answered the questions raised by the students. Everyone said that this time learned some knowledge outside the classroom and gained a lot.
+            The sharing meeting was held very successfully and attracted many students from our university, most of whom
+            were also students majoring in biology, as well as many other majors, such as chemical engineering, material
+            engineering, computer science and so on. At the end of the meeting, we answered the questions raised by the
+            students. Everyone said that this time learned some knowledge outside the classroom and gained a lot.
         </p>
         <div class="imgBox">
-            <img src="static/img/articles/demo/t--buct-china--human_practice7.jpg" style="width: 30%; height: 200px" />
-            <img src="static/img/articles/demo/t--buct-china--human_practice8.jpg" style="width: 30%;height: 200px" />
-            <img src="static/img/articles/demo/t--buct-china--human_practice9.jpg"  style="width: 30%;height: 200px" />
+            <img src="static/img/articles/demo/t--buct-china--human_practice7.jpg" style="width: 30%; height: 200px"/>
+            <img src="static/img/articles/demo/t--buct-china--human_practice8.jpg" style="width: 30%;height: 200px"/>
+            <img src="static/img/articles/demo/t--buct-china--human_practice9.jpg" style="width: 30%;height: 200px"/>
 
         </div>
     </div>
 
 
+</div>
+<button class="button button-glow button-circle button-action button-jumbo" id="topButton" onclick="scrollControl(0)"><i
+        class="fa fa-angle-up"></i></button>
+<!--主页内容结束-->
 
-    </div>
-    <button id="topButton" class="buct-button button-glow button-circle button-action button-jumbo" onclick="scrollControl(0)"><i class="fa fa-angle-up"></i></button>
-    <!--主页内容结束-->
-
-    <!--脚注-->
-<div class="wave-box" >
+<!--脚注-->
+<div class="wave-box">
     <svg viewBox="0 0 120 28">
         <defs>
             <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="1"/>
+                <feColorMatrix in="blur" mode="matrix" result="goo" values="
            1 0 0 0 0
            0 1 0 0 0
            0 0 1 0 0
-           0 0 0 13 -9" result="goo" />
-                <xfeBlend in="SourceGraphic" in2="goo" />
+           0 0 0 13 -9"/>
+                <xfeBlend in="SourceGraphic" in2="goo"/>
             </filter>
-            <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+            <path d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z"
+                  id="wave"/>
         </defs>
 
-        <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use>
-        <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+        <use class="wave" id="wave3" x="0" xlink:href="#wave" y="-2"></use>
+        <use class="wave" id="wave2" x="0" xlink:href="#wave" y="0"></use>
 
 
         <g class="gooeff" filter="url(#goo)">
-            <circle class="drop drop1" cx="20" cy="2" r="8.8"  />
-            <circle class="drop drop2" cx="25" cy="2.5" r="7.5"  />
-            <circle class="drop drop3" cx="16" cy="2.8" r="9.2"  />
-            <circle class="drop drop4" cx="18" cy="2" r="8.8"  />
-            <circle class="drop drop5" cx="22" cy="2.5" r="7.5"  />
-            <circle class="drop drop6" cx="26" cy="2.8" r="9.2"  />
-            <circle class="drop drop1" cx="5" cy="4.4" r="8.8"  />
-            <circle class="drop drop2" cx="5" cy="4.1" r="7.5"  />
-            <circle class="drop drop3" cx="8" cy="3.8" r="9.2"  />
-            <circle class="drop drop4" cx="3" cy="4.4" r="8.8"  />
-            <circle class="drop drop5" cx="7" cy="4.1" r="7.5"  />
-            <circle class="drop drop6" cx="10" cy="4.3" r="9.2"  />
+            <circle class="drop drop1" cx="20" cy="2" r="8.8"/>
+            <circle class="drop drop2" cx="25" cy="2.5" r="7.5"/>
+            <circle class="drop drop3" cx="16" cy="2.8" r="9.2"/>
+            <circle class="drop drop4" cx="18" cy="2" r="8.8"/>
+            <circle class="drop drop5" cx="22" cy="2.5" r="7.5"/>
+            <circle class="drop drop6" cx="26" cy="2.8" r="9.2"/>
+            <circle class="drop drop1" cx="5" cy="4.4" r="8.8"/>
+            <circle class="drop drop2" cx="5" cy="4.1" r="7.5"/>
+            <circle class="drop drop3" cx="8" cy="3.8" r="9.2"/>
+            <circle class="drop drop4" cx="3" cy="4.4" r="8.8"/>
+            <circle class="drop drop5" cx="7" cy="4.1" r="7.5"/>
+            <circle class="drop drop6" cx="10" cy="4.3" r="9.2"/>
 
-            <circle class="drop drop1" cx="1.2" cy="5.4" r="8.8"  />
-            <circle class="drop drop2" cx="5.2" cy="5.1" r="7.5"  />
-            <circle class="drop drop3" cx="10.2" cy="5.3" r="9.2"  />
-            <circle class="drop drop4" cx="3.2" cy="5.4" r="8.8"  />
-            <circle class="drop drop5" cx="14.2" cy="5.1" r="7.5"  />
-            <circle class="drop drop6" cx="17.2" cy="4.8" r="9.2"  />
-            <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+            <circle class="drop drop1" cx="1.2" cy="5.4" r="8.8"/>
+            <circle class="drop drop2" cx="5.2" cy="5.1" r="7.5"/>
+            <circle class="drop drop3" cx="10.2" cy="5.3" r="9.2"/>
+            <circle class="drop drop4" cx="3.2" cy="5.4" r="8.8"/>
+            <circle class="drop drop5" cx="14.2" cy="5.1" r="7.5"/>
+            <circle class="drop drop6" cx="17.2" cy="4.8" r="9.2"/>
+            <use class="wave" id="wave1" x="0" xlink:href="#wave" y="1"/>
         </g>
         <!-- g mask="url(#xxx)">
         <path   id="wave1"  class="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
@@ -360,38 +421,40 @@
     </svg>
 </div>
 <div class="wave-bottom"></div>
-    <footer>
-        <div class="container">
-            <div class="box">
-                <a class="img" href="#">
-                    <img src="static/img/igem2.png" alt="igem_logo" />
-
-                </a>
-                <p>IGEM</p>
-            </div>
-            <div class="box">
-                <a class="img" href="#">
-                    <img src="static/img/logo1.png" alt="team_logo" />
-
-                </a>
-                <p>TEAM</p>
-            </div><div class="box">
+<footer>
+    <div class="container">
+        <div class="box">
             <a class="img" href="#">
-                <img src="static/img/buct-logo2.png" alt="buct_logo" />
+                <img alt="igem_logo" src="static/img/igem2.png"/>
+
+            </a>
+            <p>IGEM</p>
+        </div>
+        <div class="box">
+            <a class="img" href="#">
+                <img alt="team_logo" src="static/img/logo1.png"/>
+
+            </a>
+            <p>TEAM</p>
+        </div>
+        <div class="box">
+            <a class="img" href="#">
+                <img alt="buct_logo" src="static/img/buct-logo2.png"/>
 
             </a>
             <p>BUCT</p>
-        </div><div class="box" style="margin-left: -30px">
+        </div>
+        <div class="box" style="margin-left: -30px">
             <a class="img" href="#">
-                <img src="static/img/zhihu.png" alt="zhihu_logo" />
+                <img alt="zhihu_logo" src="static/img/zhihu.png"/>
 
             </a>
             <p>ZhiHu</p>
         </div>
-        </div>
-        <p class="copyright">Copyright ©  2020  BUCT  All rights reserved.</p>
-    </footer>
-    <!--脚注结束-->
+    </div>
+    <p class="copyright">Copyright © 2020 BUCT All rights reserved.</p>
+</footer>
+<!--脚注结束-->
 </div>
 
 </body>
