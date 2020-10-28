@@ -1,0 +1,49 @@
+.buct-home-wiki-slide{
+
+    background-color: #F0FFF0 !important;
+    width: 110%;
+    /*position: absolute;*/
+    margin-bottom: -150px;
+
+}
+.buct-home-wiki-slide .slide{
+    margin: 0 81px 0 81px !important;
+
+}
+.buct-home-wiki-slide .slide .text-box{
+    position: absolute;
+
+}
+.buct-home-wiki-slide .slide .text-box .title{
+    width: 300px !important;
+    height: 23px !important;
+    font-size: 22px !important;
+    /*font-family: Source Han Sans SC !important;*/
+    font-weight: bold !important;
+    color: #333333 !important;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-shadow: 0 0 36px rgba(41, 115, 100, 0.15) !important;
+    background: #00C9FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.buct-home-wiki-slide .slide .text-box p{
+    text-indent: 2em;
+    border: solid #CCF6CC;
+    border-radius: 20px;
+    padding: 20px;
+    width: 480px !important;
+    font-size: 15px !important;
+    font-family: Gentium Basic !important;
+    font-weight: normal !important;
+    color: #333333 !important;
+    line-height: 24px !important;
+    text-shadow: 0px 0px 36px rgba(41, 115, 100, 0.15) !important;
+
+}

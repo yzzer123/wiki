@@ -2,10 +2,10 @@
 .article-menu{
     position: fixed;
     top:150px;
-
+    opacity:0;
     margin-left: 80px;
     width: 230px;
-    height: 290px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -13,7 +13,7 @@
     padding: 40px 20px 40px 35px;
     border: #02AAB0 1px solid;
     border-radius: 30px;
-    transition: opacity .5s ease-in-out;
+    transition: opacity .3s ease-in-out;
 }
 
 .article-menu div{
@@ -48,18 +48,17 @@
 }
 .imgBox img{
     height: 300px;
-    width: 47%;
+
 }
 
-#c-t-img-1{
+.c-t-img-1{
     float: right;
     margin: 10px 0 15px 40px;
-    width: 50%;
 }
-#c-t-img-2{
+.c-t-img-2{
     float: left;
     margin: 10px 40px 15px 0;
-    width: 50%;
+
 }
 
 .article-content img:hover{
@@ -75,23 +74,60 @@
 
 
 .article-content h1{
-    margin-top: 100px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    height: 50px;
     background: #fc00ff;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    line-height: 180px;
+
     font-size: 3em ;
     font-weight: 700!important;
     font-family: -apple-system,'Montserrat','Roboto', 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
 }
+.article-content h2{
+    height: 40px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    background: #fc00ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 3em ;
+    font-weight: bolder;
+    font-family: -apple-system,'Montserrat','Roboto', 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
+}
+.article-content h3{
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    background: #fc00ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 40px ;
+    font-weight: bolder;
+}
 .article-content p{
+    text-indent: 2em;
     line-height: 1.6!important;
     font-size: 1.6em!important;
     font-family: -apple-system, Roboto,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
     text-align: justify!important;
     margin-bottom: 1.8em !important;
+}
+.article-content b{
+    background: #fc00ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .article-content h1 img{
     animation: dot_rotate 10s infinite 0s linear;

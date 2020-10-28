@@ -9,6 +9,7 @@
 .clearfix:after {
 	content: " ";
 	display: table;
+
 }
 
 .clearfix:after {
@@ -18,11 +19,14 @@
 
 
 .t-card-wrapper {
-	margin: 0 auto 100px auto;
-	max-width: 70vw;
+	margin: 0 auto;
+	width: 100vw;
 }
 
 .stage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	list-style: none;
 	padding: 0;
 }
@@ -192,15 +196,15 @@ Posters and still images
 }
 
 .scene:nth-child(1) .movie .poster {
-	background-image: url("https://2020.igem.org/wiki/images/2/23/T--BUCT--t1.jpg");
+	background-image: url("https://2020.igem.org/wiki/images/e/ef/T--BUCT--photo_niuxiaoqi.jpeg");
 }
 
 .scene:nth-child(2) .poster {
-	background-image: url("https://2020.igem.org/wiki/images/e/e5/T--BUCT--t2.jpg");
+	background-image: url("https://2020.igem.org/wiki/images/2/21/T--BUCT--photo_lizhengjun.jpeg");
 }
 
 .scene:nth-child(3) .poster {
-	background-image: url("https://2020.igem.org/wiki/images/e/e5/T--BUCT--t2.jpg");
+	background-image: url("https://2020.igem.org/wiki/images/0/05/T--BUCT--photo_sunxinxiao.jpeg");
 }
 
 .scene:nth-child(1) .info header {

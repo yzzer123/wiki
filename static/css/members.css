@@ -1,15 +1,18 @@
+body{
+    cursor: unset !important;
+}
 .members-container{
 
     font-family: 'Poppins', sans-serif !important;
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     padding: 30px;
     margin: -5px auto !important;
-    height: 2800px;
+    height: 2500px;
 
 }
 #three-container{
@@ -22,17 +25,11 @@
     background-color:  rgb(250, 255, 250);
 
 }
-.members-container .card{
+.members-container .buct-s-card{
     position: relative;
-    max-width: 300px;
-    height: 215px;
-    background: #fff;
+
     margin: 30px 10px;
     padding: 20px 15px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    transition: 0.3s ease-in-out;
 }
 .members-container .card:hover{
     height: 500px;
@@ -62,6 +59,7 @@
     visibility: hidden;
     opacity: 0;
     transition: 0.3s ease-in-out;
+    
 }
 .members-container .card:hover .content{
     visibility: visible;
@@ -81,12 +79,132 @@
     background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: bolder !important;
 }
-.instructors{
+.instructors {
     background: #B3FFAB;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #12FFF7, #B3FFAB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: bolder !important;
+
 
 }
+:root {
+    --background-color: #2c3e50;
+    --border-color: #7591AD;
+    --text-color: #34495e;
+    --color1: #EC3E27;
+    --color2: #fd79a8;
+    --color3: #0984e3;
+    --color4: rgb(174,221,129);
+    --color5: #fdcb6e;
+    --color6: #e056fd;
+    --color7: #F97F51;
+    --color8: #BDC581;
+    --a_border_color: #86a3b3;
+    --h2_border_color: #8ea2b8;
+    --a_hover_background_color: #86a3b3;
+    --font_color: #e8f6fd;
+}
+
+.card-row {
+    font-size: 14px;
+    width: 100vw;
+    height: 80vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+}
+
+.buct-s-card {
+    font-size: 14px;
+    /* flex布局下元素不按比例缩放 */
+    flex-shrink: 0;
+    font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+    flex-grow: 0;
+    position: relative;
+    width: 265px;
+    height: 380px;
+    overflow: hidden;
+    margin: 20px;
+    background-color: var(--color4);
+    border-radius: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* flex 子元素 纵向排列 */
+    flex-direction: column;
+    /* 增加个阴影 */
+    box-shadow: 0 0 30px #BDC581;
+    /* 同意给字体价格颜色 */
+    color: var(--font_color)
+}
+
+.buct-s-photo {
+    position: absolute;
+    /* 默认为放大 */
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    border-radius: 0%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.buct-s-photo::before {
+    /* 通过before增加渐变背景实现遮罩，让文字默认看起来清晰一些 */
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #333, transparent);
+}
+.buct-s-card:hover .photo::before{
+    /* 缩小时隐藏 */
+    display: none;
+}
+
+.buct-s-photo img {
+    /* 图片高宽均为100% */
+    /* 然后按照cover缩放，裁切长边 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buct-s-card:hover .buct-s-photo {
+    /* 鼠标移上变小 */
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #111;
+}
+
+.buct-s-card h1 {
+    position: absolute;
+    top: 380px;
+    color:  #e8f6fd;
+    transition: 0.5s;
+}
+
+.buct-s-card:hover h1 {
+    position: absolute;
+    top: 110px;
+}
+
+
+.buct-s-card p {
+    width: 90%;
+    /* 段落缩进2个字符大小 */
+    text-indent: 2em;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 60%;
+    line-height: 20px;
+}
+
